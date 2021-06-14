@@ -7,6 +7,7 @@
 
 .li_footer {
     display : inline;
+
 }
 
 .footer_font_size {
@@ -53,7 +54,7 @@ footer {
         <div class="col-md-1"></div>
         <div class="col-md-5">
             <ul>
-                <li class="li_footer"><a class="" href="">Terms & Conditions</a></li>
+                <li class="li_footer"><a class="" href="termAndCondition.html">Terms & Conditions</a></li>
                 <li class="li_footer li_border"><a class="" href="">&#124; Privacy Policy &#124;</a></li>
                 <li class="li_footer"><a class="" href="">Legal Disclaimer</a></li>
             </ul>

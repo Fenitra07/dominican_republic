@@ -69,24 +69,23 @@ function myMovement() {
 // Condition : Do you make stops in other countries ?
 function stopCountry() {
 
-      var stopCountry = document.getElementById("stopCountry").value;
-      console.log(stopCountry);
+      var stopcountry = document.getElementById("stopcountry").value;
+      console.log(stopcountry);
 
-      if (stopCountry == "No") {
-        document.getElementById("r_no1").style.display = "block";
-        document.getElementById("r_yes2").style.display = "none";
+      if (stopcountry == "No") {
+        document.getElementById("r_no3").style.display = "block";
+        document.getElementById("r_yes3").style.display = "none";
       }
 
-      if (stopCountry == "Yes") {
-        document.getElementById("r_yes2").style.display = "block";
-        document.getElementById("r_no1").style.display = "none";
+      if (stopcountry == "Yes") {
+        document.getElementById("r_yes3").style.display = "block";
+        document.getElementById("r_no3").style.display = "none";
       }
 
-      if (stopCountry == "Select an option") {
-        document.getElementById("r_yes2").style.display = "none";
-        document.getElementById("r_no1").style.display = "none";
+      if (stopcountry == "Select an option") {
+        document.getElementById("r_yes3").style.display = "none";
+        document.getElementById("r_no3").style.display = "none";
       }
-
 
 }
 
