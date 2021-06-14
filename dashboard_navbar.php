@@ -32,7 +32,13 @@
                      <span class="barre_navbar">&#124;</span>
                      <li class="menu-item"><a href="message.html">Confirmation Mail</a></li>
                      <span class="barre_navbar">&#124;</span>
-                     <li class="menu-item"><a href="facture.html">Bill</a></li>
+                     <li class="menu-item menu-item-has-children">
+                        <a href="" data-toggle="sub-menu">Bill<i class="expand"></i></a>
+                        <ul class="dropdown-menu sub-menu">
+                           <li class="menu-item"><a href="facture-us.html">US</a></li>
+                           <li class="menu-item"><a href="facture-fr.html">FR</a></li>
+                        </ul>
+                     </li>
                      <span class="barre_navbar">&#124;</span>
                      <li class="menu-item"><a href="termAndCondition.html">Terms & Conditions</a></li>
                      <span class="barre_navbar">&#124;</span>

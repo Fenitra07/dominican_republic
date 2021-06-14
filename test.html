@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>change demo</title>
+  <style>
+
+  </style>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
+</head>
+<body>
+
+  <select id="operation" onclick="myOperation()">
+    <option>Select an option</option>
+    <option>no</option>
+    <option>yes</option>
+  </select>
+
+  <div id="r_no" style="display: none">
+    <p>Raha NO dia ity no miseho</p>
+  </div>
+  <div id="r_yes" style="display: none">
+    <p>Raha YES dia ity no miseho</p>
+  </div>
+
+<script type="text/javascript">
+
+    function myOperation() {
+
+      var operation = document.getElementById("operation").value;
+    console.log(operation);
+
+      if (operation == "no") {
+        document.getElementById("r_no").style.display = "block";
+        document.getElementById("r_yes").style.display = "none";
+      }
+
+      if (operation == "yes") {
+        document.getElementById("r_yes").style.display = "block";
+        document.getElementById("r_no").style.display = "none";
+      }
+
+      if (operation == "Select an option") {
+        document.getElementById("r_yes").style.display = "none";
+        document.getElementById("r_no").style.display = "none";
+      }
+
+
+    }
+
+  </script>
+
+
+</body>
+</html>

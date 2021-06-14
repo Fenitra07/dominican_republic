@@ -57,7 +57,7 @@
                             <div class="name">Arrival or Departure (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
+                                    <select class="input--style-6 select_style" id="movement" onclick="myMovement()">
                                       <option>Select an option</option>
                                       <option>Arrival</option>
                                       <option>Departure</option>
@@ -69,7 +69,7 @@
                             <div class="name">Do you make stops in other countries ? (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
+                                    <select class="input--style-6 select_style" id="stopCountry" onclick="stopCountry()">
                                       <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
@@ -199,7 +199,7 @@
                             <div class="name">Are you going to stay at a hotel?  (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
+                                    <select class="input--style-6 select_style" id="operation1" onclick="myOperation1()">
                                       <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
@@ -207,334 +207,346 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">Hotel name (*)</div>
+                        <div class="form-row" id="r_yes1" style="display: none">
+                            <div class="name"><span class="name_option">Hotel name (*)</span></div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-6" type="" name="" placeholder="">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">PROVINCE  (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>Azua</option>
-                                      <option>Bahoruco</option>
-                                      <option>Barahona</option>
-                                      <option>Dajabón</option>
-                                      <option>Distrito Nacional</option>
-                                      <option>Duarte</option>
-                                      <option>El Seibo</option>
-                                      <option>Elías Piña</option>
-                                      <option>Espaillat</option>
-                                      <option>Hato Mayor</option>
-                                      <option>Hermanas Mirabal</option>
-                                      <option>Independencia</option>
-                                      <option>La Altagracia</option>
-                                      <option>La Romana</option>
-                                      <option>La Vega</option>
-                                      <option>María Trinidad Sánchez</option>
-                                      <option>Monseñor Nouel</option>
-                                      <option>Monte Crísti</option>
-                                      <option>Monte Plata</option>
-                                      <option>Pedernales</option>
-                                      <option>Peravia</option>
-                                      <option>Puerto Plata</option>
-                                      <option>Samaná</option>
-                                      <option>San Cristóbal</option>
-                                      <option>San José de Ocoa</option>
-                                      <option>San JuanSan José de Ocoa</option>
-                                      <option>San Pedro de Macorís</option>
-                                      <option>Sanchez Ramírez</option>
-                                      <option>Santiago</option>
-                                      <option>Santiago Rodríguez</option>
-                                      <option>Valverde</option>
-                                    </select>
-                                </div>
-                            </div>
+                        <div id="r_no1" style="display: none">
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">PROVINCE  (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>Azua</option>
+                                        <option>Bahoruco</option>
+                                        <option>Barahona</option>
+                                        <option>Dajabón</option>
+                                        <option>Distrito Nacional</option>
+                                        <option>Duarte</option>
+                                        <option>El Seibo</option>
+                                        <option>Elías Piña</option>
+                                        <option>Espaillat</option>
+                                        <option>Hato Mayor</option>
+                                        <option>Hermanas Mirabal</option>
+                                        <option>Independencia</option>
+                                        <option>La Altagracia</option>
+                                        <option>La Romana</option>
+                                        <option>La Vega</option>
+                                        <option>María Trinidad Sánchez</option>
+                                        <option>Monseñor Nouel</option>
+                                        <option>Monte Crísti</option>
+                                        <option>Monte Plata</option>
+                                        <option>Pedernales</option>
+                                        <option>Peravia</option>
+                                        <option>Puerto Plata</option>
+                                        <option>Samaná</option>
+                                        <option>San Cristóbal</option>
+                                        <option>San José de Ocoa</option>
+                                        <option>San JuanSan José de Ocoa</option>
+                                        <option>San Pedro de Macorís</option>
+                                        <option>Sanchez Ramírez</option>
+                                        <option>Santiago</option>
+                                        <option>Santiago Rodríguez</option>
+                                        <option>Valverde</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">MUNICIPALITY (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">SECTION</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">MUNICIPALITY (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">SECTION</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
+
+
                         <!-- FLIGHT INFORMATION -->
-                        <h3 class="form_title">FLIGHT INFORMATION</h3>
-                        <div class="form-row">
-                            <div class="name">Name of the boarding port (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Flight number (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Flight date (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="date" name="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Disembarkation port (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
-                                      <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
-                                      <option>STI - AEROPUERTO INTERNACIONAL DEL CIBAO</option>
-                                      <option>POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA</option>
-                                      <option>JBQ - AEROPUERTO INTERNACIONAL LA ISABELA, JOAQUIN BALAGUER</option>
-                                      <option>LRM - AEROPUERTO INTERNACIONAL LA ROMANA</option>
-                                      <option>BRX - AEROPUERTO INTERNACIONAL MARIA MONTEZ, BARAHONA</option>
-                                      <option>AZS - AEROPUERTO INTERNACIONAL PRESIDENTE JUAN BOSH</option>
-                                      <option>SAI - BASE AEREA DE SAN ISIDRO</option>
-                                      <option>XXX - OTHER</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Transportation company (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Travel purpose (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>Visit friends and/or family</option>
-                                      <option>Studies</option>
-                                      <option>Convention – Conference</option>
-                                      <option>Business</option>
-                                      <option>Professionnal</option>
-                                      <option>Medical reasons</option>
-                                      <option>Leisure</option>
-                                      <option>Others</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Days of staying (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Arrival Condition Begin -->
+                        <div id="r_arrival" style="display: none">
+                          <h3 class="form_title">FLIGHT INFORMATION</h3>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight number (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight date (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="date" name="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
+                                        <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
+                                        <option>STI - AEROPUERTO INTERNACIONAL DEL CIBAO</option>
+                                        <option>POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA</option>
+                                        <option>JBQ - AEROPUERTO INTERNACIONAL LA ISABELA, JOAQUIN BALAGUER</option>
+                                        <option>LRM - AEROPUERTO INTERNACIONAL LA ROMANA</option>
+                                        <option>BRX - AEROPUERTO INTERNACIONAL MARIA MONTEZ, BARAHONA</option>
+                                        <option>AZS - AEROPUERTO INTERNACIONAL PRESIDENTE JUAN BOSH</option>
+                                        <option>SAI - BASE AEREA DE SAN ISIDRO</option>
+                                        <option>XXX - OTHER</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Transportation company (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Travel purpose (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>Visit friends and/or family</option>
+                                        <option>Studies</option>
+                                        <option>Convention – Conference</option>
+                                        <option>Business</option>
+                                        <option>Professionnal</option>
+                                        <option>Medical reasons</option>
+                                        <option>Leisure</option>
+                                        <option>Others</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Days of staying (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
 
-                        <div class="form-row">
-                            <div class="name">Origin Port (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Origin Port (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight number (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight date (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="date" name="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight number (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight date (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="date" name="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
+                                        <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
+                                        <option>STI - AEROPUERTO INTERNACIONAL DEL CIBAO</option>
+                                        <option>POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA</option>
+                                        <option>JBQ - AEROPUERTO INTERNACIONAL LA ISABELA, JOAQUIN BALAGUER</option>
+                                        <option>LRM - AEROPUERTO INTERNACIONAL LA ROMANA</option>
+                                        <option>BRX - AEROPUERTO INTERNACIONAL MARIA MONTEZ, BARAHONA</option>
+                                        <option>AZS - AEROPUERTO INTERNACIONAL PRESIDENTE JUAN BOSH</option>
+                                        <option>SAI - BASE AEREA DE SAN ISIDRO</option>
+                                        <option>XXX - OTHER</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Transportation company (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Travel purpose (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>Visit friends and/or family</option>
+                                        <option>Studies</option>
+                                        <option>Convention – Conference</option>
+                                        <option>Business</option>
+                                        <option>Professionnal</option>
+                                        <option>Medical reasons</option>
+                                        <option>Leisure</option>
+                                        <option>Others</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Days of staying (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">Flight number (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Flight date (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="date" name="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Name of the boarding port (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Flight number (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Flight date (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="date" name="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Disembarkation port (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
-                                      <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
-                                      <option>STI - AEROPUERTO INTERNACIONAL DEL CIBAO</option>
-                                      <option>POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA</option>
-                                      <option>JBQ - AEROPUERTO INTERNACIONAL LA ISABELA, JOAQUIN BALAGUER</option>
-                                      <option>LRM - AEROPUERTO INTERNACIONAL LA ROMANA</option>
-                                      <option>BRX - AEROPUERTO INTERNACIONAL MARIA MONTEZ, BARAHONA</option>
-                                      <option>AZS - AEROPUERTO INTERNACIONAL PRESIDENTE JUAN BOSH</option>
-                                      <option>SAI - BASE AEREA DE SAN ISIDRO</option>
-                                      <option>XXX - OTHER</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Transportation company (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Travel purpose (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>Visit friends and/or family</option>
-                                      <option>Studies</option>
-                                      <option>Convention – Conference</option>
-                                      <option>Business</option>
-                                      <option>Professionnal</option>
-                                      <option>Medical reasons</option>
-                                      <option>Leisure</option>
-                                      <option>Others</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Days of staying (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Arrival Condition End -->
 
-
-                        <div class="form-row">
-                            <div class="name">Name of the boarding port (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
-                                      <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
-                                      <option>STI - AEROPUERTO INTERNACIONAL DEL CIBAO</option>
-                                      <option>POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA</option>
-                                      <option>JBQ - AEROPUERTO INTERNACIONAL LA ISABELA, JOAQUIN BALAGUER</option>
-                                      <option>LRM - AEROPUERTO INTERNACIONAL LA ROMANA</option>
-                                      <option>BRX - AEROPUERTO INTERNACIONAL MARIA MONTEZ, BARAHONA</option>
-                                      <option>AZS - AEROPUERTO INTERNACIONAL PRESIDENTE JUAN BOSH</option>
-                                      <option>SAI - BASE AEREA DE SAN ISIDRO</option>
-                                      <option>XXX - OTHER</option>
-                                    </select>
-                                </div>
-                            </div>
+                        <!-- Departure Condition Begin -->
+                        <div id="r_departure" style="display: none">
+                          <h3 class="form_title">FLIGHT INFORMATION</h3>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
+                                        <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
+                                        <option>STI - AEROPUERTO INTERNACIONAL DEL CIBAO</option>
+                                        <option>POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA</option>
+                                        <option>JBQ - AEROPUERTO INTERNACIONAL LA ISABELA, JOAQUIN BALAGUER</option>
+                                        <option>LRM - AEROPUERTO INTERNACIONAL LA ROMANA</option>
+                                        <option>BRX - AEROPUERTO INTERNACIONAL MARIA MONTEZ, BARAHONA</option>
+                                        <option>AZS - AEROPUERTO INTERNACIONAL PRESIDENTE JUAN BOSH</option>
+                                        <option>SAI - BASE AEREA DE SAN ISIDRO</option>
+                                        <option>XXX - OTHER</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight number (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Flight date (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="date" name="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Disembarkation port  (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Transportation company (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Travel purpose (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <select class="input--style-6 select_style">
+                                        <option>Select an option</option>
+                                        <option>Visit friends and/or family</option>
+                                        <option>Studies</option>
+                                        <option>Convention – Conference</option>
+                                        <option>Business</option>
+                                        <option>Professionnal</option>
+                                        <option>Medical reasons</option>
+                                        <option>Leisure</option>
+                                        <option>Others</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">Days of staying (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">Flight number (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Flight date (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="date" name="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Disembarkation port  (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Transportation company (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Travel purpose (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>Visit friends and/or family</option>
-                                      <option>Studies</option>
-                                      <option>Convention – Conference</option>
-                                      <option>Business</option>
-                                      <option>Professionnal</option>
-                                      <option>Medical reasons</option>
-                                      <option>Leisure</option>
-                                      <option>Others</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Days of staying (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Departure Condition End -->
 
 
             </div>
@@ -542,14 +554,16 @@
             <!-- PARTIE 2 du formulaire -->
 
             <div style="display: none" id="part2">
-                        <!-- FINAL STEP -->
+
+          <!-- FINAL STEP -->
           <!-- <div> SCRIPT JS : Begin 2nd part of FORM -->
+
                           <h3 class="form_title">FINAL STEP - Customs and public health information</h3>
                         <div class="form-row">
                             <div class="name">Do you bring with you or in your luggage a sum of money or other means of payment exceeding USD 10,000 or the equivalent in another currency?</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
+                                    <select class="input--style-6 select_style" id="operation2" onclick="myOperation2()">
                                       <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
@@ -557,30 +571,34 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">AMMOUNT (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
+                        <!-- yes condition begin -->
+                        <div id="r_yes2" style="display: none">
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">AMMOUNT (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">CURRENCY (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name"><span class="name_option">DECLARE ORIGIN OF THE SECURITIES (*)</span></div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-6" type="" name="" placeholder="">
+                                  </div>
+                              </div>
+                          </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">CURRENCY (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">DECLARE ORIGIN OF THE SECURITIES (*)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
-                                </div>
-                            </div>
-                        </div>
+                        <!-- yes condition end -->
                         <div class="form-row">
                             <div class="name">Do you bring food, plants or animals with you or in your luggage?</div>
                             <div class="value">
@@ -698,10 +716,10 @@
 
     <!-- Jquery JS-->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
-
-
     <!-- Main JS-->
     <script src="assets/js/global.js"></script>
+    <!-- Form script (Select/option) -->
+    <script src="assets/js/form_script.js"></script>
 
 
 <script type="text/javascript">
@@ -720,6 +738,10 @@
 
     }
   </script>
+
+
+
+
 
 </body>
 

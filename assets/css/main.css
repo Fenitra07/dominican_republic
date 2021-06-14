@@ -87,6 +87,11 @@
   margin-top: 11px;
 }
 
+.name_option {
+  color: grey;
+}
+
+
 .form-row .value {
   width: -webkit-calc(100% - 188px);
   width: -moz-calc(100% - 188px);
