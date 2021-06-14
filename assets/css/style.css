@@ -1,0 +1,85 @@
+.section_top {
+padding-top: 30px;
+}
+
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  font-family: 'quicksand','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;
+}
+
+.div_form_title {
+  padding-bottom: 30px;
+}
+.form_first_title {
+  text-align: justify;
+  color: #ec3d3a;
+}
+
+.form_title {
+  text-align: justify;
+  /*font-weight: bold;*/
+  color: #ec3d3a;
+  border-bottom: 1px solid grey;
+}
+
+.form_paragraph {
+  text-align: justify;
+}
+
+p {
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+
+.fond_bleu {
+  background-color: #137fc2;
+  /*Ty ilay loko tena izy : #064266*/
+  /*width: 100%;*/
+}
+
+.fond_gris {
+  background-color: grey;
+  /*Ty ilay loko tena izy : #064266*/
+  /*width: 100%;*/
+}
+
+.fond_bleu_drapeau {
+  background-color: #064266;
+  /*Ty ilay loko tena izy : #064266*/
+  /*width: 100%;*/
+}
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+.texte_blanc {
+  color: white;
+}
+
+.img_center {
+    text-align: center;
+  }
+
+
+@media only screen and (max-width: 768px)
+{
+
+  .mobile_img {
+    text-align: center;
+  }
+
+  .mobile_padding_bottom {
+    padding-bottom: 20px;
+  }
+
+  .section_top {
+      padding-top: 1px;
+  }
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form method="post" action="">
+
+
+		<div id="part1">
+			<label>text1</label>
+			<input type="text" name="">
+		</div>
+
+		<div style="display: none" id="part2">
+			<label>text2</label>
+			<input type="text"  name="">
+		</div>
+	</form>
+
+		<button style="display: none" id="previous" onclick="MyFunctionprevious()">Previous</button>
+		<button id="next" onclick="MyFunctionNext()">Next</button>
+
+
+	<script type="text/javascript">
+		function MyFunctionNext() {
+			var text2 = document.getElementById("part2").style.display = "block";
+			var text1 = document.getElementById("part1").style.display = "none";
+			var next = document.getElementById("next").style.display = "none";
+			var previous = document.getElementById("previous").style.display = "block";
+		}
+
+		function MyFunctionprevious() {
+			var text2 = document.getElementById("part2").style.display = "none";
+			var text1 = document.getElementById("part1").style.display = "block";
+			var next = document.getElementById("next").style.display = "block";
+			var previous = document.getElementById("previous").style.display = "none";
+
+		}
+	</script>
+</body>
+</html>
