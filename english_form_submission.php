@@ -8,12 +8,17 @@
     <link href="assets/css/main.css" rel="stylesheet" media="all">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
 </head>
+<style type="text/css">
+  html {
+  scroll-behavior: smooth;
+}
+</style>
 
 <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper" id="section1">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
-                <div class="card-body">
+                <div class="card-body" >
 
 
               <form method="POST">
@@ -709,15 +714,14 @@
 
                   <!-- BOUTTON SUIVANT & PREVIOUS-->
                         <div class="button_previous card_button_previous">
-                           <button class="btn btn--radius-2 btn--blue-2" style="display: none" id="previous" onclick="MyFunctionprevious()">Previous</button>
+                           <button class="btn btn--radius-2 btn--blue-2" style="display: none" id="previous" onclick="MyFunctionprevious()"><a href="#section1">Previous</a></button>
                         </div>
                         <div class="card_button_next">
-                            <button class="btn btn--radius-2 btn--blue-2" id="next" onclick="MyFunctionNext()">Next</button>
+                            <button class="btn btn--radius-2 btn--blue-2" id="next" onclick="MyFunctionNext()"><a href="#section1">Next</a></button>
                         </div>
 
 
                 <!-- </div> SCRIPT JS : End 2nd part of FORM -->
-
 
               </div>
             </div>
@@ -728,30 +732,8 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <!-- Main JS-->
     <script src="assets/js/global.js"></script>
-    <!-- Form script (Select/option) -->
+    <!-- Form script (Select/option) + Button Next&Previous -->
     <script src="assets/js/form_script.js"></script>
-
-
-<script type="text/javascript">
-    function MyFunctionNext() {
-      var text2 = document.getElementById("part2").style.display = "block";
-      var text1 = document.getElementById("part1").style.display = "none";
-      var next = document.getElementById("next").style.display = "none";
-      var previous = document.getElementById("previous").style.display = "block";
-    }
-
-    function MyFunctionprevious() {
-      var text2 = document.getElementById("part2").style.display = "none";
-      var text1 = document.getElementById("part1").style.display = "block";
-      var next = document.getElementById("next").style.display = "block";
-      var previous = document.getElementById("previous").style.display = "none";
-
-    }
-  </script>
-
-
-
-
 
 </body>
 

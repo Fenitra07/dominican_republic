@@ -89,3 +89,26 @@ function stopCountry() {
 
 }
 
+
+
+
+// BUTTON NEXT & PREVIOUS
+
+    function MyFunctionNext() {
+      var text2 = document.getElementById("part2").style.display = "block";
+      var text1 = document.getElementById("part1").style.display = "none";
+      var next = document.getElementById("next").style.display = "none";
+      var previous = document.getElementById("previous").style.display = "block";
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    function MyFunctionprevious() {
+      var text2 = document.getElementById("part2").style.display = "none";
+      var text1 = document.getElementById("part1").style.display = "block";
+      var next = document.getElementById("next").style.display = "block";
+      var previous = document.getElementById("previous").style.display = "none";
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+

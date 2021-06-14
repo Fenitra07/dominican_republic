@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/ionicons.min.css">
 
   <!-- Fonts & Fonticons -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.min.css">
 
