@@ -225,7 +225,7 @@
                               <div class="name"><span class="name_option">PROVINCE  (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <select class="input--style-6 select_style">
+                                      <select class="input--style-6 select_style" name="province">
                                         <option>Select an option</option>
                                         <option>Azua</option>
                                         <option>Bahoruco</option>
@@ -266,7 +266,7 @@
                               <div class="name"><span class="name_option">MUNICIPALITY (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="" placeholder="">
+                                      <input class="input--style-6" type="" name="municipality" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -274,7 +274,7 @@
                               <div class="name"><span class="name_option">SECTION</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="" placeholder="">
+                                      <input class="input--style-6" type="" name="section" placeholder="">
                                   </div>
                               </div>
                           </div>

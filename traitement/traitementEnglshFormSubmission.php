@@ -30,6 +30,9 @@
 	$numero_passport = $_POST["numero_passport"];
 	$email = $_POST["email"];
 	$numero = $_POST["numero"];
+	$province = $_POST["province"];
+	$municipality = $_POST["municipality"];
+	$section = $_POST["section"];
 
 	/*table civlité*/
 	$etat_civil = $_POST["etat_civil"];
@@ -48,8 +51,8 @@
 	 VALUES ('$etat_civil')";
 
 	/*tokony mbola apina id infrmation adresse sy id etat_civil*/
-	 $sql = "INSERT INTO passasger (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,stay_hotel, email, numero, profession_id, civilite_id)
-	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero', '$libelle', '$etat_civil')";
+	 $sql = "INSERT INTO passasger (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,stay_hotel, email, numero,province,municipality,section, profession_id, civilite_id)
+	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section', '$libelle', '$etat_civil')";
 
 	 $sql = "INSERT INTO demande_billet (ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, accept_condition_generale, demande_immediat)
 	 VALUES ('$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$accept_condition_generale', '$demande_immediat')";
