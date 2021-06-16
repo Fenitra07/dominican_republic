@@ -21,7 +21,7 @@
                 <div class="card-body" >
 
 
-              <form method="POST">
+              <form method="POST" action="traitement/traitementEnglshFormSubmission.php">
 
 
                   <div id="part1">
@@ -31,14 +31,14 @@
                         <div class="form-row">
                             <div class="name">Permanent address (*)</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="">
+                                <input class="input--style-6" type="text" name="permanentAdress">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">City (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="ville" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             <div class="name">State (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="etat" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="name">Zip code (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="code_postal" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                             <div class="name">Arrival or Departure (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" id="movement" onclick="myMovement()">
+                                    <select class="input--style-6 select_style" name="type_voyage" id="movement" onclick="myMovement()">
                                       <option>Select an option</option>
                                       <option>Arrival</option>
                                       <option>Departure</option>
@@ -74,7 +74,7 @@
                             <div class="name">Do you make stops in other countries ? (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" id="stopcountry" onclick="stopCountry()">
+                                    <select class="input--style-6 select_style" name="is_arret_frequent" id="stopcountry" onclick="stopCountry()">
                                       <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
@@ -88,7 +88,7 @@
                             <div class="name">Names (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="noms" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                             <div class="name">Last Names (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="nom_famille" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                             <div class="name">Date of birth (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="">
+                                    <input class="input--style-6" type="date" name="date_naissance">
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                             <div class="name">Gender (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
+                                    <select class="input--style-6 select_style" name="genre">
                                       <option>Select an option</option>
                                       <option>Masuline</option>
                                       <option>Feminine</option>
@@ -125,7 +125,7 @@
                             <div class="name">Country of birth (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="pays_naissance" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                             <div class="name">Country of nationality (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="pays_nationnalite" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                             <div class="name">Passport number (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="numero_passport" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -149,13 +149,13 @@
                             <div class="name">Civil status (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
-                                      <option>Select an option</option>
-                                      <option>Free Union</option>
-                                      <option>Concubinage</option>
-                                      <option>Married</option>
-                                      <option>Single</option>
-                                      <option>Other</option>
+                                    <select name="etat_civil" class="input--style-6 select_style">
+                                      <option value="1">Select an option</option>
+                                      <option value="2">Free Union</option>
+                                      <option value="3">Concubinage</option>
+                                      <option value="4">Married</option>
+                                      <option value="5">Single</option>
+                                      <option value="6">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -164,38 +164,38 @@
                             <div class="name">Ocupation (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style">
+                                    <select class="input--style-6 select_style" name="libelle">
                                       <option>Select an option</option>
-                                      <option>Actor</option>
-                                      <option>Analyst</option>
-                                      <option>Artist</option>
-                                      <option>Baker</option>
-                                      <option>Blacksmith</option>
-                                      <option>Carpenter</option>
-                                      <option>Cashier</option>
-                                      <option>CEO</option>
-                                      <option>Consultant</option>
-                                      <option>Craftman</option>
-                                      <option>Doctor</option>
-                                      <option>Electrician</option>
-                                      <option>Engineer</option>
-                                      <option>Entrepreneur</option>
-                                      <option>Firefighter</option>
-                                      <option>Freelancer</option>
-                                      <option>Graphic Designer</option>
-                                      <option>Journalist</option>
-                                      <option>Lawyer</option>
-                                      <option>Merchant</option>
-                                      <option>Painter</option>
-                                      <option>Private employee</option>
-                                      <option>Public employee</option>
-                                      <option>Salesman</option>
-                                      <option>Shoemaker</option>
-                                      <option>Student</option>
-                                      <option>Teacher</option>
-                                      <option>Truck driver</option>
-                                      <option>Worker</option>
-                                      <option>Others</option>
+                                      <option value="1">Actor</option>
+                                      <option value="2">Analyst</option>
+                                      <option value="3">Artist</option>
+                                      <option value="4">Baker</option>
+                                      <option value="5">Blacksmith</option>
+                                      <option value="6">Carpenter</option>
+                                      <option value="7">Cashier</option>
+                                      <option value="8">CEO</option>
+                                      <option value="9">Consultant</option>
+                                      <option value="10">Craftman</option>
+                                      <option value="11">Doctor</option>
+                                      <option value="12">Electrician</option>
+                                      <option value="13">Engineer</option>
+                                      <option value="14">Entrepreneur</option>
+                                      <option value="15">Firefighter</option>
+                                      <option value="16">Freelancer</option>
+                                      <option value="17">Graphic Designer</option>
+                                      <option value="18">Journalist</option>
+                                      <option value="19">Lawyer</option>
+                                      <option value="20">Merchant</option>
+                                      <option value="21">Painter</option>
+                                      <option value="22">Private employee</option>
+                                      <option value="23">Public employee</option>
+                                      <option value="24">Salesman</option>
+                                      <option value="25">Shoemaker</option>
+                                      <option value="26">Student</option>
+                                      <option value="27">Teacher</option>
+                                      <option value="28">Truck driver</option>
+                                      <option value="29">Worker</option>
+                                      <option value="30">Others</option>
                                     </select>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
                             <div class="name">Are you going to stay at a hotel?  (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" id="operation1" onclick="myOperation1()">
+                                    <select class="input--style-6 select_style" name="stay_hotel" id="operation1" onclick="myOperation1()">
                                       <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
@@ -592,7 +592,7 @@
                               <div class="name"><span class="name_option">AMMOUNT (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="" placeholder="">
+                                      <input class="input--style-6" type="" name="ammount" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -600,7 +600,7 @@
                               <div class="name"><span class="name_option">CURRENCY (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="" placeholder="">
+                                      <input class="input--style-6" type="" name="currency" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -608,7 +608,7 @@
                               <div class="name"><span class="name_option">DECLARE ORIGIN OF THE SECURITIES (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="" placeholder="">
+                                      <input class="input--style-6" type="" name="declare_origin_security" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -685,7 +685,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name"><input type="checkbox" name=""></div>
+                            <div class="name"><input type="checkbox" name="accept_condition_generale"></div>
                             <div class="value">
                                 <div class="input-group">
                                     <span>I accept the general conditions of sale and use and I certify on my honour the accuracy of the information provided. It's reminded that any person making a false declaration on behalf of himself or herself or another person may be liable to the penalties provided for in articles 441-1 of the penal code and following. </span>
@@ -693,7 +693,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name"><input type="checkbox" name=""></div>
+                            <div class="name"><input type="checkbox" name="demande_immediat"></div>
                             <div class="value">
                                 <div class="input-group">
                                     <span>I would like my E-ticket request to start immediately. I expressly waive my right of withdrawal so that the service can begin before the end of the legal withdrawal period.</span>
