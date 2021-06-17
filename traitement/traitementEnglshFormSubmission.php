@@ -1,9 +1,9 @@
 <?php 
-
+var_dump($_POST);die();
 	include('../connexion/connexion.php');
 
 	/*table demande billet*/
-	$accept_condition_generale= $_POS["accept_condition_generale"];
+	$accept_condition_generale= $_POST["accept_condition_generale"];
 	$demande_immediat = $_POST["demande_immediat"];
 	$apport_nourriture = $_POST["apport_nourriture"];
 	$apport_marchandise_taxable = $_POST["apport_marchandise_taxable"];
@@ -33,6 +33,16 @@
 	$province = $_POST["province"];
 	$municipality = $_POST["municipality"];
 	$section = $_POST["section"];
+	$hotel_name = $_POST["hotel_name"];
+	$travel_purpose = $_POST["travel_purpose"];
+	$days_staying = $_POST["days_staying"];
+	$origin_port = $_POST["origin_port"];
+	$disembarkation_port = $_POST["disembarkation_port"];
+	$transportation_company = $_POST["transportation_company"];
+	$name_bard_port = $_POST["name_bard_port"];
+	$flight_number = $_POST["flight_number"];
+	$flight_date = $_POST["flight_date"];
+
 
 	/*table civlité*/
 	$etat_civil = $_POST["etat_civil"];
@@ -43,28 +53,27 @@
 	$symptome = $_POST["symptome"];
 	$apport_bagage = $_POST["apport_bagage"];
 
+	
 
 	$sql = "INSERT INTO information_adresse (adresse_permanent, ville, etat, code_postal, type_voyage, is_arret_frequent)
-	 VALUES ('$adresse_permanent', '$ville', '$etat', '$code_postal', '$type_voyage', '$is_arret_frequent')";
+	 VALUES ('$adresse_permanent', '$ville', '$etat', '$code_postal', '$type_voyage', '$is_arret_frequent');";
 
-	 $sql = "INSERT INTO civilite (etat_civil)
-	 VALUES ('$etat_civil')";
+	 $sql .= "INSERT INTO civilite (etat_civil)
+	 VALUES ('$etat_civil');";
 
 	/*tokony mbola apina id infrmation adresse sy id etat_civil*/
-	 $sql = "INSERT INTO passasger (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,stay_hotel, email, numero,province,municipality,section, profession_id, civilite_id)
-	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section', '$libelle', '$etat_civil')";
+	 $sql .= "INSERT INTO passasger (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,stay_hotel, email, numero,province,municipality,section,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_bard_port,flight_number,flight_date, profession_id, civilite_id)
 
-	 $sql = "INSERT INTO demande_billet (ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, accept_condition_generale, demande_immediat)
-	 VALUES ('$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$accept_condition_generale', '$demande_immediat')";
+	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_bard_port', '$flight_number', '$flight_date', '$libelle', '$etat_civil');";
+
+	 $sql .= "INSERT INTO demande_billet (ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, accept_condition_generale, demande_immediat)
+	 VALUES ('$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$accept_condition_generale', '$demande_immediat');";
 
 
 	 
 
 	 $conn->exec($sql);
 	 echo "New record created successfully";
-	} catch(PDOException $e) {
-	  echo $sql . "<br>" . $e->getMessage();
-	}
-
+	
 
  ?>
