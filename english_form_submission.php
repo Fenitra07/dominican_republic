@@ -690,7 +690,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name"><input type="checkbox" name="accept_condition_generale"></div>
+                            <div class="name"><input value="false" type="checkbox" name="accept_condition_generale"></div>
                             <div class="value">
                                 <div class="input-group">
                                     <span>I accept the general conditions of sale and use and I certify on my honour the accuracy of the information provided. It's reminded that any person making a false declaration on behalf of himself or herself or another person may be liable to the penalties provided for in articles 441-1 of the penal code and following. </span>
@@ -698,7 +698,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name"><input type="checkbox" name="demande_immediat"></div>
+                            <div class="name"><input value="false" type="checkbox" name="demande_immediat"></div>
                             <div class="value">
                                 <div class="input-group">
                                     <span>I would like my E-ticket request to start immediately. I expressly waive my right of withdrawal so that the service can begin before the end of the legal withdrawal period.</span>

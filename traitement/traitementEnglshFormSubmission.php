@@ -1,10 +1,16 @@
 <?php 
-var_dump($_POST);die();
+
 	include('../connexion/connexion.php');
 
 	/*table demande billet*/
-	$accept_condition_generale= $_POST["accept_condition_generale"];
-	$demande_immediat = $_POST["demande_immediat"];
+
+	if (isset($_POST["accept_condition_generale"]) || isset($_POST["demande_immediat"])) {
+		$accept_condition_generale = "true";
+		$demande_immediat = "true";
+	}else{
+		$accept_condition_generale = "false";
+		$demande_immediat = "false";
+	}
 	$apport_nourriture = $_POST["apport_nourriture"];
 	$apport_marchandise_taxable = $_POST["apport_marchandise_taxable"];
 	$ammount = $_POST["ammount"];
