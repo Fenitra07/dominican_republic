@@ -15,21 +15,21 @@
             <div class="card card-6">
                 <div class="card-body">
 
-              <form method="POST">
+              <form method="POST" action="contact.php">
 
                   <div id="part1">
                       <!-- GENERAL INFORMATION -->
                         <div class="form-row">
                             <div class="name">Names (*)</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="">
+                                <input class="input--style-6" type="text" name="nom">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Last Names (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="text" name="prenom" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                             <div class="name">Phone (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="text" name="contact" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="name">E-mail (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="" placeholder="">
+                                    <input class="input--style-6" type="" name="email" placeholder="">
                                 </div>
                             </div>
                         </div>

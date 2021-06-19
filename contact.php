@@ -21,6 +21,9 @@
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.min.css">
 
+  <script type="text/javascript" src="js/sweetalert2.all.js"></script>
+  <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+
 
 
 </head>
@@ -85,3 +88,4 @@
 
 </body>
 </html>
+<?php include("mail/mail_contact.php"); ?>

@@ -31,7 +31,7 @@
                         <div class="form-row">
                             <div class="name">Permanent address (*)</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="permanentAdress">
+                                <input class="input--style-6" type="text" name="adresse_permanent">
                             </div>
                         </div>
                         <div class="form-row">
@@ -206,10 +206,9 @@
                             <div class="name">Are you going to stay at a hotel?  (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" name="stay_hotel" id="operation1" onclick="myOperation1()">
-                                      <option>Select an option</option>
-                                      <option>No</option>
-                                      <option>Yes</option>
+                                    <select class="input--style-6 select_style" name="accept_sejour_hotel"  id="operation1" onclick="myOperation1()">
+                                      <option value="false">No</option>
+                                      <option value="true">Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -685,7 +684,7 @@
                             <div class="name">Your phone number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="mail" name="number" placeholder="">
+                                    <input class="input--style-6" type="test" name="numero" placeholder="">
                                 </div>
                             </div>
                         </div>

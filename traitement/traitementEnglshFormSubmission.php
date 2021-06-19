@@ -19,16 +19,18 @@
 
 	/*table information_adresse*/
 	$adresse_permanent = $_POST["adresse_permanent"];
-	$ville	= $_POST["ville	"];
+	$ville	= $_POST["ville"];
 	$etat = $_POST["etat"];
 	$code_postal = $_POST["code_postal"];
 	$type_voyage = $_POST["type_voyage"];
 	$is_arret_frequent = $_POST["is_arret_frequent"];
-	$accept_sejour_hotel = $_POST["stay_hotel"];
+
+	$accept_sejour_hotel = $_POST["accept_sejour_hotel"];
+
 
 	/*table passasger*/
 	$noms = $_POST["noms"];
-	$nom_famille = $_["nom_famille"];
+	$nom_famille = $_POST["nom_famille"];
 	$date_naissance = $_POST["date_naissance"];
 	$genre = $_POST["genre"];
 	$pays_naissance	 = $_POST["pays_naissance"];
@@ -56,30 +58,36 @@
 	/*table profession, libelle = occupation*/
 	$libelle = $_POST["libelle"];
 
-	$symptome = $_POST["symptome"];
-	$apport_bagage = $_POST["apport_bagage"];
+	//$symptome = $_POST["symptome"];
+	//$apport_bagage = $_POST["apport_bagage"];
 
 	
 
-	$sql = "INSERT INTO information_adresse (adresse_permanent, ville, etat, code_postal, type_voyage, is_arret_frequent)
-	 VALUES ('$adresse_permanent', '$ville', '$etat', '$code_postal', '$type_voyage', '$is_arret_frequent');";
+	$sql1 = "INSERT INTO information_adresse (adresse_permanent, ville, etat, code_postal, type_voyage, is_arret_frequent)
+	VALUES ('$adresse_permanent', '$ville', '$etat', '$code_postal', '$type_voyage', '$is_arret_frequent')";
+	$conn->query($sql1);
 
-	 $sql .= "INSERT INTO civilite (etat_civil)
-	 VALUES ('$etat_civil');";
+	/*$sqlSelectId = "SELECT id FROM information_adresse";
+	$result = $conn->query($sqlSelectId);
+	$row = $result->fetch_all();
+    var_dump($row);die();*/
+
+	 $sql2 = "INSERT INTO civilite (etat_civil)
+	 VALUES ('$etat_civil')";
+	 $conn->query($sql2);
 
 	/*tokony mbola apina id infrmation adresse sy id etat_civil*/
-	 $sql .= "INSERT INTO passasger (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,stay_hotel, email, numero,province,municipality,section,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_bard_port,flight_number,flight_date, profession_id, civilite_id)
+	 $sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_bard_port,flight_number,flight_date/*, profession_id, civilite_id*/)
+	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_bard_port', '$flight_number', '$flight_date'/*, '$libelle', '$etat_civil'*/)";
+	 $conn->query($sql3);
 
-	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_bard_port', '$flight_number', '$flight_date', '$libelle', '$etat_civil');";
 
-	 $sql .= "INSERT INTO demande_billet (ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, accept_condition_generale, demande_immediat)
-	 VALUES ('$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$accept_condition_generale', '$demande_immediat');";
+	 $sql4 = "INSERT INTO demande_billet (ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, accept_condition_generale, demande_immediat)
+	 VALUES ('$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$accept_condition_generale', '$demande_immediat')";
+	$conn->query($sql4);
 
 
 	 
-
-	 $conn->exec($sql);
-	 echo "New record created successfully";
 	
 
  ?>
