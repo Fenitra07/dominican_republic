@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <link rel="stylesheet" type="text/css" href="assets/css/reset.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title></title>
 
 <style type="text/css">
 
 .li_footer {
-    display : inline;
+  display : inline;
 
 }
 
@@ -36,8 +36,19 @@ a:hover {
 
 footer {
   padding-top: 30px;
+  padding-bottom: 24px;
 }
 
+.footer_align {
+  margin-right: -20px;
+}
+
+@media only screen and (max-width: 768px)
+{
+    footer {
+        text-align: center;
+    }
+}
 
 </style>
 
@@ -47,7 +58,7 @@ footer {
     <footer class="fond_gris">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-1"></div>
+        <div class="col-md-1 footer_align"></div>
         <div class="col-md-5">
           <p class="texte_blanc footer_font_size">GO-DOMINICAN-REPUBLIC.COM is a private website non affiliated with the government</p>
         </div>

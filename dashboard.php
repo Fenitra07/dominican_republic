@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="en">
 <head>
   <!-- Charset -->
   <meta charset="utf-8">
   <!-- mobile setting -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Title -->
-  <title>Mon Projet</title>
+  <title>Dashboard</title>
   <link rel="shortcut icon" href="assets/favicon/favicon.ico">
   <!-- CSS & Boostrap-->
   <link rel="stylesheet" type="text/css" href="assets/css/table.css">
