@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="en">
 <head>
   <!-- Charset -->
   <meta charset="utf-8">
   <!-- mobile setting -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Title -->
-  <title>Mon Projet</title>
+  <title>Contact</title>
   <link rel="shortcut icon" href="assets/favicon/favicon.ico">
   <!-- CSS & Boostrap-->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -30,16 +30,16 @@
     include("navbar.php");
     ?>
 
-  <section class="section_top fond_bleu_drapeau">
+  <section class="fond_bleu_drapeau">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
-          <h1 class="texte_blanc">ELECTRONIC TICKET TO ENTER OR EXIT THE DOMINICAN REPUBLIC</h1>
+          <h2 class="texte_blanc" id="align_left">GO-DOMINICAN-REPUBLIC<br>E-ticket application <img class="flag" src="assets/img/flag.png"></h2>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5 img_center">
-          <img src="assets/img/tourist.png">
+          <img class="tourist" src="assets/img/tourist.png">
         </div>
       </div>
     </div>

@@ -677,7 +677,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Your phone number</div>
+                            <div class="name">Your phone number (*)</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-6" type="mail" name="" placeholder="">

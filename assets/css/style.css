@@ -1,8 +1,3 @@
-.section_top {
-padding-top: 30px;
-}
-
-
 h1, h2, h3, h4, h5 {
   text-align: center;
   font-family: 'quicksand','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;
@@ -42,30 +37,88 @@ p {
 .fond_gris {
   background-color: grey;
   /*Ty ilay loko tena izy : #064266*/
-  /*width: 100%;*/
+
 }
 
 .fond_bleu_drapeau {
   background-color: #064266;
+  padding-top: 40px;
+  padding-bottom: 0px;
   /*Ty ilay loko tena izy : #064266*/
   /*width: 100%;*/
 }
 
+.section_index {
+  padding-top: 70px;
+  padding-bottom: 62px;
+
+}
+
 .section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 62px;
+}
+
+.section_top {
+  padding-top: 90px;
+  padding-bottom: 75px;
 }
 
 
+.icons {
+  text-align: center;
+  line-height: 8;
+}
+.form_icon {
+  width: 96px;
+}
+
+#enter_the_form {
+  margin-top: 20px;
+}
 
 .texte_blanc {
   color: white;
+}
+
+.interligne {
+  line-height: 2.7;
+}
+
+#align_left {
+  text-align: left;
 }
 
 .img_center {
     text-align: center;
   }
 
+.flag {
+  width: 36px;
+}
+
+
+.tourist {
+  width: 340px;
+  margin-top: -31px;
+}
+
+.menu {
+  margin-top: 56px;
+  margin-bottom: -13px;
+}
+
+
+.under_logo {
+    width: 538px;
+    margin-bottom: -29px;
+    margin-top: -52px;
+    margin-left: -47px;
+}
+
+#portal {
+  margin-top: 43px;
+}
 
 @media only screen and (max-width: 768px)
 {
@@ -79,7 +132,43 @@ p {
   }
 
   .section_top {
-      padding-top: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
+
+  .section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .section_index {
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+
+  .tourist {
+    width: 343px;
+    margin-top: 7px;
+  }
+
+  #align_left {
+    text-align: left;
+    margin-top: 23px;
+  }
+
+  .under_logo {
+    width: 500px;
+    margin-bottom: -25px;
+    margin-top: 11px;
+    margin-left: 0px;
+  }
+
+  .fond_bleu_drapeau {
+    background-color: #064266;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    /* width: 100%; */
+  }
+
 
 }

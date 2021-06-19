@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <link rel="stylesheet" type="text/css" href="assets/css/reset.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
@@ -39,7 +39,7 @@
                      <span class="barre_navbar">&#124;</span>
                      <li class="menu-item"><a href="english_form.php">Enter the form</a></li>
                      <span class="barre_navbar">&#124;</span>
-                     <li class="menu-item"><a href="#">Entrer dans le formulaire</a></li>
+                     <li class="menu-item"><a href="#">Demander un E-ticket</a></li>
                      <span class="barre_navbar">&#124;</span>
                      <li class="menu-item"><a href="contact.php">Contact</a></li>
                   </ul>
