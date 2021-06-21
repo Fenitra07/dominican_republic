@@ -1,5 +1,6 @@
-body{margin-top:20px;
-background:#eee;
+body {
+    margin-top:20px;
+    background:#eee;
 }
 .label.arrowed-in-right,
 .label.arrowed-right {
@@ -17,10 +18,18 @@ label.arrowed,
     z-index: 1
 }
 
+.menu {
+    margin-top: 56px;
+    margin-bottom: -13px;
+}
+
+a {
+    text-decoration: none;
+}
+
 p {
-    /*font-family: "Poppins", Arial, sans-serif;*/
-    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-  /*font-family: 'quicksand','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;*/
+    font-family: "Poppins", Arial, sans-serif;
+
 }
 
 .title {

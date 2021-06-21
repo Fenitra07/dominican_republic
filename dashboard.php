@@ -52,7 +52,7 @@
               <th style="width:16%;">Permanent address</th>
               <th style="width:16%;">Passport number</th>
               <th style="width:5%;">View</th>
-              <th style="width:8%;">Action</th>
+              <th style="width:8%;">Delete</th>
             </tr>
             <tr>
               <td>Alfreds Futterkiste</td>
@@ -60,7 +60,7 @@
               <td>LOT IVH GT</td>
               <td>PASSEPORT 121398</td>
               <td><i class="fa fa-eye"></i></td>
-              <td><button class="btn btn-info"><i class="fa fa-edit"></i></button> <button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
+              <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
             </tr>
             <tr>
               <td>Berglunds snabbkop</td>
@@ -68,7 +68,7 @@
               <td>LOT IVH GT</td>
               <td>PASSEPORT 121398</td>
               <td><i class="fa fa-eye"></i></td>
-              <td><button class="btn btn-info"><i class="fa fa-edit"></i></button> <button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
+              <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
             </tr>
           </table>
 
