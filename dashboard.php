@@ -62,7 +62,7 @@
                 die("Error connection: " . $conn->connect_error);
             }
 
-            $sql = "SELECT passager.noms, passager.nom_famille, passager.information_adresse_id, information_adresse.adresse_permanent, passager.numero_passport FROM passager INNER JOIN information_adresse ON passager.information_adresse_id = information_adresse.id";
+            $sql = "SELECT passager.id,passager.noms, passager.nom_famille, passager.information_adresse_id, information_adresse.adresse_permanent, passager.numero_passport FROM passager INNER JOIN information_adresse ON passager.information_adresse_id = information_adresse.id";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -85,8 +85,8 @@
               <td><?php echo $row["nom_famille"];?></td>
               <td><?php echo $row["adresse_permanent"];?></td>
               <td>PASSEPORT <?php echo $row["numero_passport"];?></td>
-              <td><i class="fa fa-eye"></i></td>
-              <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
+              <td><a href="traitement/voir.php?id=<?= $row["id"]?>"><i class="fa fa-eye"></i></a></td>
+              <td><button class="btn btn-danger"><a href="traitement/delete.php?id=<?= $row["id"]?>"><i class="fa fa-trash"></i></a></button></td>
             </tr>
 
                   <?php
