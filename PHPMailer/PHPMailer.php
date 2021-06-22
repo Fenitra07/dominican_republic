@@ -4050,20 +4050,20 @@ class PHPMailer
                 $match = [];
                 if (preg_match('#^data:(image/(?:jpe?g|gif|png));?(base64)?,(.+)#', $url, $match)) {
                     if (count($match) === 4 && static::ENCODING_BASE64 === $match[2]) {
-                        $data = base64_decode($match[3]);
+                        isset($data = base64_decode($match[3]);
                     } elseif ('' === $match[2]) {
-                        $data = rawurldecode($match[3]);
+                        isset($data = rawurldecode($match[3]);
                     } else {
                         //Not recognised so leave it alone
                         continue;
                     }
                     //Hash the decoded data, not the URL, so that the same data-URI image used in multiple places
                     //will only be embedded once, even if it used a different encoding
-                    $cid = substr(hash('sha256', $data), 0, 32) . '@phpmailer.0'; // RFC2392 S 2
+                    $cid = substr(hash('sha256', isset($data), 0, 32) . '@phpmailer.0'; // RFC2392 S 2
 
                     if (!$this->cidExists($cid)) {
                         $this->addStringEmbeddedImage(
-                            $data,
+                            isset($data,
                             $cid,
                             'embed' . $imgindex,
                             static::ENCODING_BASE64,

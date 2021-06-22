@@ -141,7 +141,7 @@
 	$conn->query($sql5);
 
 
-	 
+	 header('location:../index.php');
 	
 
  ?>

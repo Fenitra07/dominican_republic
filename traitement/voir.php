@@ -60,7 +60,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">City (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["ville"] ?>" name="ville" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["ville"])? $data["ville"]: '' ?>" name="ville" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">State (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["etat"] ?>" name="etat" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["etat"])? $data["etat"]: '' ?>" name="etat" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Zip code (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["code_postal"] ?>" name="code_postal" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["code_postal"])? $data["code_postal"]: '' ?>" name="code_postal" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -84,11 +84,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Arrival or Departure (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" value="<?= $data["type_voyage"] ?>" name="type_voyage" id="movement" onclick="myMovement()">
-                                      <option>Select an option</option>
-                                      <option>Arrival</option>
-                                      <option>Departure</option>
-                                    </select>
+                                    <input class="input--style-6 select_style" value="<?= isset($data["type_voyage"])? $data["type_voyage"]: '' ?>" name="type_voyage" id="movement" onclick="myMovement()">
                                 </div>
                             </div>
                         </div>
@@ -96,7 +92,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Do you make stops in other countries ? (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6 select_style" value="<?= $data["is_arret_frequent"] ?>" name="is_arret_frequent" id="stopcountry" onclick="stopCountry()">
+                                    <input class="input--style-6 select_style" value="<?= isset($data["is_arret_frequent"])? $data["is_arret_frequent"]: '' ?>" name="is_arret_frequent" id="stopcountry" onclick="stopCountry()">
                                 </div>
                             </div>
                         </div>
@@ -108,7 +104,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Names (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["noms"] ?>" name="noms" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["noms"])? $data["noms"] : ''  ?>" name="noms" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -116,7 +112,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Last Names (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["nom_famille"] ?>" name="nom_famille" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["nom_famille"])? $data["nom_famille"]: '' ?>" name="nom_famille" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -124,7 +120,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Date of birth (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" value="<?= $data["date_naissance"] ?>" name="date_naissance">
+                                    <input class="input--style-6" type="date" value="<?= isset($data["date_naissance"])? $data["date_naissance"]: '' ?>" name="date_naissance">
                                 </div>
                             </div>
                         </div>
@@ -132,7 +128,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Gender (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6 select_style" value="<?= $data["genre"] ?>" name="genre">
+                                    <input class="input--style-6 select_style" value="<?= isset($data["genre"])? $data["genre"]: '' ?>" name="genre">
                                 </div>
                             </div>
                         </div>
@@ -148,7 +144,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Country of nationality (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["pays_nationnalite"] ?>" name="pays_nationnalite" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["pays_nationnalite"])? $data["pays_nationnalite"]: '' ?>" name="pays_nationnalite" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -156,7 +152,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Passport number (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" value="<?= $data["numero_passport"] ?>" type="" name="numero_passport" placeholder="">
+                                    <input class="input--style-6" value="<?= isset($data["numero_passport"])? $data["numero_passport"]: '' ?>" type="" name="numero_passport" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -164,7 +160,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Civil status (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input value="<?= $data["etat_civil"] ?>" name="etat_civil" class="input--style-6 select_style">
+                                    <input value="<?= isset($data["etat_civil"])? $data["etat_civil"]: '' ?>" name="etat_civil" class="input--style-6 select_style">
                                 </div>
                             </div>
                         </div>
@@ -172,7 +168,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Ocupation (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6 select_style" value="<?= $data["libelle"] ?>" name="libelle">
+                                    <input class="input--style-6 select_style" value="<?= isset($data["libelle"])? $data["libelle"]: '' ?>" name="libelle">
                                 </div>
                             </div>
                         </div>
@@ -180,24 +176,24 @@ if (!empty($_GET["id"])) {
                             <div class="name">Are you going to stay at a hotel?  (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6 select_style" value="<?= $data["accept_sejour_hotel"] ?>" name="accept_sejour_hotel"  id="operation1" onclick="myOperation1()">
+                                    <input class="input--style-6 select_style" value="<?= isset($data["accept_sejour_hotel"])? $data["accept_sejour_hotel"]: '' ?>" name="accept_sejour_hotel"  id="operation1" onclick="myOperation1()">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row" id="r_yes1" style="display: none">
+                        <div class="form-row" id="r_yes1" >
                             <div class="name"><span class="name_option">Hotel name (*)</span></div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" value="<?= $data["hotel_name"] ?>" name="hotel_name" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["hotel_name"])? $data["hotel_name"]: '' ?>" name="hotel_name" placeholder="">
                                 </div>
                             </div>
                         </div>
-                        <div id="r_no1" style="display: none">
+                        <div id="r_no1" >
                           <div class="form-row">
                               <div class="name"><span class="name_option">PROVINCE  (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6 select_style" value="<?= $data["province"] ?>" name="province">
+                                      <input class="input--style-6 select_style" value="<?= isset($data["province"])? $data["province"]: '' ?>" name="province">
                                   </div>
                               </div>
                           </div>
@@ -205,7 +201,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">MUNICIPALITY (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["municipality"] ?>" name="municipality" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["municipality"])? $data["municipality"]: '' ?>" name="municipality" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -213,7 +209,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">SECTION</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["section"] ?>" name="section" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["section"])? $data["section"]: '' ?>" name="section" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -222,15 +218,15 @@ if (!empty($_GET["id"])) {
 
                         <!-- FLIGHT INFORMATION -->
                         <!-- Arrival Condition Begin -->
-                        <div id="r_arrival" style="display: none">
+                        <div id="r_arrival" >
                           <!-- "Do you make stops in other countries" = NO -->
-                          <div id="r_no3" style="display: none">
+                          <div id="r_no3" >
                             <h3 class="form_title">FLIGHT INFORMATION</h3>
                             <div class="form-row">
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["name_bard_port"] ?>" name="name_bard_port" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["name_bard_port"])? $data["name_bard_port"]: '' ?>" name="name_bard_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +234,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["flight_number"] ?>" name="flight_number" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +242,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" value="<?= $data["flight_date"] ?>" name="flight_date">
+                                        <input class="input--style-6" type="date" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" name="flight_date">
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +250,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6 select_style" value="<?= $data["disembarktion_port"] ?>" name=disembarktion_port>
+                                        <input class="input--style-6 select_style" value="<?= isset($data["disembarktion_port"])? $data["disembarktion_port"]: '' ?>" name="disembarktion_port">
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +258,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Transportation company (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["transportation_company"] ?>" name="transportation_company" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["transportation_company"])? $data["transportation_company"]: '' ?>" name="transportation_company" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +266,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6 select_style" value="<?= $data["travel_purpose"] ?>" name="travel_purpose">
+                                        <input class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
                                     </div>
                                 </div>
                             </div>
@@ -278,7 +274,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Days of staying (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["day_staying"] ?>" name="days_staying" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["day_staying"])? $data["day_staying"]: '' ?>" name="days_staying" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -286,13 +282,13 @@ if (!empty($_GET["id"])) {
                           <!-- "Do you make stops in other countries" = NO -->
 
                           <!-- "Do you make stops in other countries" = YES -->
-                          <div id="r_yes3" style="display: none">
+                          <div id="r_yes3" >
                             <h3 class="form_title">FLIGHT INFORMATION</h3>
                             <div class="form-row">
                                 <div class="name"><span class="name_option">Origin Port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["origin_port"] ?>" name="origin_port" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["origin_port"])? $data["origin_port"]: '' ?>" name="origin_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +296,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["flight_number"] ?>" name="flight_number" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -308,7 +304,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" value="<?= $data["flight_date"] ?>" name="flight_date">
+                                        <input class="input--style-6" type="date" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" name="flight_date">
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +312,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["name_bard_port"] ?>" name="name_bard_port" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["name_bard_port"])? $data["name_bard_port"]: '' ?>" name="name_bard_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +320,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["flight_number"] ?>" name="flight_number" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -332,7 +328,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" value="<?= $data["flight_date"] ?>" name="flight_date">
+                                        <input class="input--style-6" type="date" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" name="flight_date">
                                     </div>
                                 </div>
                             </div>
@@ -340,7 +336,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6 select_style" value="<?= $data["disembarkation_port"] ?>" name="disembarkation_port">
+                                        <input class="input--style-6 select_style" value="<?= isset($data["disembarkation_port"])? $data["disembarkation_port"]: '' ?>" name="disembarkation_port">
                                     </div>
                                 </div>
                             </div>
@@ -348,7 +344,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Transportation company (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["transportation_company"] ?>" name="transportation_company" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["transportation_company"])? $data["transportation_company"]: '' ?>" name="transportation_company" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +352,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <select class="input--style-6 select_style" value="<?= $data["travel_purpose"] ?>" name="travel_purpose">
+                                        <select class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
                                     </div>
                                 </div>
                             </div>
@@ -364,7 +360,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Days of staying (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" value="<?= $data["day_staying"] ?>" name="day_staying" placeholder="">
+                                        <input class="input--style-6" type="" value="<?= isset($data["day_staying"])? $data["day_staying"]: '' ?>" name="day_staying" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -375,13 +371,13 @@ if (!empty($_GET["id"])) {
                         <!-- Arrival Condition End -->
 
                         <!-- Departure Condition Begin -->
-                        <div id="r_departure" style="display: none">
+                        <div id="r_departure" >
                           <h3 class="form_title">FLIGHT INFORMATION</h3>
                           <div class="form-row">
                               <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6 select_style" value="<?= $data["name_bard_port"] ?>" name="name_bard_port">
+                                      <input class="input--style-6 select_style" value="<?= isset($data["name_bard_port"])? $data["name_bard_port"]: '' ?>" name="name_bard_port">
                                   </div>
                               </div>
                           </div>
@@ -389,7 +385,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Flight number (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["flight_number"] ?>" name="flight_number" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -397,7 +393,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Flight date (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" value="<?= $data["flight_date"] ?>" type="date" name="flight_date">
+                                      <input class="input--style-6" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" type="date" name="flight_date">
                                   </div>
                               </div>
                           </div>
@@ -405,7 +401,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Disembarkation port  (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["disembarktion_port"] ?>" name="disembarktion_port" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["disembarktion_port"])? $data["disembarktion_port"]: '' ?>" name="disembarktion_port" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -413,7 +409,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Transportation company (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["transportation_company"] ?>" name="transportation_company" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["transportation_company"])? $data["transportation_company"]: '' ?>" name="transportation_company" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -421,7 +417,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6 select_style" value="<?= $data["travel_purpose"] ?>" name="travel_purpose">
+                                      <input class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
                                   </div>
                               </div>
                           </div>
@@ -429,7 +425,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Days of staying (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["day_staying"] ?>" name="days_staying" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["day_staying"])? $data["day_staying"]: '' ?>" name="days_staying" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -441,31 +437,21 @@ if (!empty($_GET["id"])) {
 
             <!-- PARTIE 2 du formulaire -->
 
-            <div style="display: none" id="part2">
+            <div  id="part2">
 
           <!-- FINAL STEP -->
           <!-- <div> SCRIPT JS : Begin 2nd part of FORM -->
 
                           <h3 class="form_title">FINAL STEP - Customs and public health information</h3>
                         <div class="form-row">
-                            <div class="name">Do you bring with you or in your luggage a sum of money or other means of payment exceeding USD 10,000 or the equivalent in another currency?</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <select class="input--style-6 select_style" id="operation2" onclick="myOperation2()">
-                                      <option>Select an option</option>
-                                      <option>No</option>
-                                      <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
                         </div>
                         <!-- yes condition begin -->
-                        <div id="r_yes2" style="display: none">
+                        <div id="r_yes2" >
                           <div class="form-row">
                               <div class="name"><span class="name_option">AMMOUNT (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["ammount"] ?>" name="ammount" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["ammount"])? $data["ammount"]: '' ?>" name="ammount" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -473,7 +459,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">CURRENCY (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["currency"] ?>" name="currency" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["currency"])? $data["currency"]: '' ?>" name="currency" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -481,7 +467,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">DECLARE ORIGIN OF THE SECURITIES (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" value="<?= $data["declare_origin_security"] ?>" name="declare_origin_security" placeholder="">
+                                      <input class="input--style-6" type="" value="<?= isset($data["declare_origin_security"])? $data["declare_origin_security"]: '' ?>" name="declare_origin_security" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -491,7 +477,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Do you bring food, plants or animals with you or in your luggage?</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6 select_style" value="<?= $data["apport_nourriture"] ?>" name="apport_nourriture">
+                                    <input class="input--style-6 select_style" value="<?= isset($data["apport_nourriture"])? $data["apport_nourriture"]: '' ?>" name="apport_nourriture">
                                 </div>
                             </div>
                         </div>
@@ -499,7 +485,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Do you bring taxable goods with you or in your luggage? </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" value="<?= $data["apport_marchandise_taxable"] ?>" name="apport_marchandise_taxable">
+                                    <select class="input--style-6 select_style" value="<?= isset($data["apport_marchandise_taxable"])? $data["apport_marchandise_taxable"]: '' ?>" name="apport_marchandise_taxable">
                                 </div>
                             </div>
                         </div>
@@ -513,8 +499,22 @@ if (!empty($_GET["id"])) {
                         <div class="form-row">
                             <table>
                               <tr>
-                                <td><input class="" type="checkbox" name="none"><p>None</p></td>
-                                <td><input class="" type="checkbox" name="sorethoat"><p>Sore throat</p></td>
+                              	<?php 
+	                            	if ($data["none"] == "true") {
+	                            		$none = true;
+	                            	} else{
+	                            		$none = false;
+	                            	}
+                            	?>
+                                <td><input class="" type="checkbox" <?= $none? "checked": ""  ?> name="none"><p>None</p></td>
+                                <?php 
+                                	if ($data["sorethoat"] == "true") {
+	                            		$sorethoat = true;
+	                            	} else {
+	                            		$sorethoat = false;
+	                            	}
+                                 ?>
+                                <td><input class="" type="checkbox" <?= $sorethoat? "checked": ''  ?> name="sorethoat"><p>Sore throat</p></td>
                                 <td><input class="" type="checkbox" name="muscle_paain"><p>Muscle pain</p></td>
                               </tr>
                               <tr>
@@ -540,7 +540,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Your e-mail address to receive your E-ticket (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="mail" value="<?= $data["email"] ?>" name="email" placeholder="">
+                                    <input class="input--style-6" type="mail" value="<?= isset($data["email"])? $data["email"]: '' ?>" name="email" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -548,7 +548,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Your phone number (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="test" value="<?= $data["numero"] ?>" name="numero" placeholder="">
+                                    <input class="input--style-6" type="test" value="<?= isset($data["numero"])? $data["numero"]: '' ?>" name="numero" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -570,9 +570,9 @@ if (!empty($_GET["id"])) {
                         </div>
 
                         <!-- SUBMIT BOUTTON -->
-                        <div class="card-footer">
+                       <!--  <div class="card-footer">
                             <button class="btn btn--radius-2 btn--blue-2" type="submit">Finalise the application</button>
-                        </div>
+                        </div> -->
                         <!-- SUBMIT BOUTTON -->
 
           </div>
@@ -581,12 +581,12 @@ if (!empty($_GET["id"])) {
                   <!-- </form> -->
 
                   <!-- BOUTTON SUIVANT & PREVIOUS-->
-                        <div class="button_previous card_button_previous">
-                           <button class="btn btn--radius-2 btn--blue-2" style="display: none" id="previous" onclick="MyFunctionprevious()"><a href="#section1">Previous</a></button>
+                       <!--  <div class="button_previous card_button_previous">
+                           <button class="btn btn--radius-2 btn--blue-2"  id="previous" onclick="MyFunctionprevious()"><a href="#section1">Previous</a></button>
                         </div>
                         <div class="card_button_next">
                             <button class="btn btn--radius-2 btn--blue-2" id="next" onclick="MyFunctionNext()"><a href="#section1">Next</a></button>
-                        </div>
+                        </div> -->
 
 
                 <!-- </div> SCRIPT JS : End 2nd part of FORM -->

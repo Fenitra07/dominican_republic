@@ -62,7 +62,7 @@
                 die("Error connection: " . $conn->connect_error);
             }
 
-            $sql = "SELECT passager.id,passager.noms, passager.nom_famille, passager.information_adresse_id, information_adresse.adresse_permanent, passager.numero_passport FROM passager INNER JOIN information_adresse ON passager.information_adresse_id = information_adresse.id";
+            $sql = "SELECT passager.id,passager.noms, passager.nom_famille, passager.information_adresse_id, information_adresse.adresse_permanent, passager.numero_passport FROM passager LEFT JOIN information_adresse ON passager.information_adresse_id = information_adresse.id";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
