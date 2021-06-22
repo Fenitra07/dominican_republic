@@ -2,7 +2,7 @@
 	
 	include('../connexion/connexion.php');
 
-    if (isset($_POST["login"]) && isset($_POST["mdp"])) {
+    if (!empty($_POST["login"]) && !empty($_POST["mdp"])) {
         $login = $_POST["login"];
         $mdp = $_POST["mdp"];
 

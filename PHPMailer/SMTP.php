@@ -726,8 +726,8 @@ class SMTP
                 $in_headers = false;
             }
             //Break this line up into several smaller lines if it's too long
-            //Micro-optimisation: isset($str[$len]) is faster than (strlen($str) > $len),
-            while (isset($line[self::MAX_LINE_LENGTH])) {
+            //Micro-optimisation: !empty($str[$len]) is faster than (strlen($str) > $len),
+            while (!empty($line[self::MAX_LINE_LENGTH])) {
                 //Working backwards, try to find a space within the last MAX_LINE_LENGTH chars of the line to break on
                 //so as to avoid breaking in the middle of a word
                 $pos = strrpos(substr($line, 0, self::MAX_LINE_LENGTH), ' ');
@@ -1240,7 +1240,7 @@ class SMTP
             // If response is only 3 chars (not valid, but RFC5321 S4.2 says it must be handled),
             // or 4th character is a space or a line break char, we are done reading, break the loop.
             // String array access is a significant micro-optimisation over strlen
-            if (!isset($str[3]) || $str[3] === ' ' || $str[3] === "\r" || $str[3] === "\n") {
+            if (!!empty($str[3]) || $str[3] === ' ' || $str[3] === "\r" || $str[3] === "\n") {
                 break;
             }
             // Timed-out? Log and break

@@ -1827,7 +1827,7 @@ class PHPMailer
             $result = $this->mailPassthru($to, $this->Subject, $body, $header, $params);
             $this->doCallback($result, $this->to, $this->cc, $this->bcc, $this->Subject, $body, $this->From, []);
         }
-        if (isset($old_from)) {
+        if (!empty($old_from)) {
             ini_set('sendmail_from', $old_from);
         }
         if (!$result) {
@@ -3885,7 +3885,7 @@ class PHPMailer
         $result = '';
         if (!empty($this->Hostname)) {
             $result = $this->Hostname;
-        } elseif (isset($_SERVER) && array_key_exists('SERVER_NAME', $_SERVER)) {
+        } elseif (!empty($_SERVER) && array_key_exists('SERVER_NAME', $_SERVER)) {
             $result = $_SERVER['SERVER_NAME'];
         } elseif (function_exists('gethostname') && gethostname() !== false) {
             $result = gethostname();

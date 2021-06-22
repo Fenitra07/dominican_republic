@@ -1,7 +1,7 @@
 <?php
 	include('../connexion/connexion.php');
 
-	if (isset($_GET["id"])) {
+	if (!empty($_GET["id"])) {
 	 	$id = $_GET["id"]; 
 
 	$sqlDelete = "DELETE FROM demande_billet WHERE passager_id = 9;

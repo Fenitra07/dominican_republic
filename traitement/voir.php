@@ -2,7 +2,7 @@
 
 include('../connexion/connexion.php');
 
-if (isset($_GET["id"])) {
+if (!empty($_GET["id"])) {
  	$id = $_GET["id"];
 	
 	 $sqlVoir = "SELECT * FROM passager p

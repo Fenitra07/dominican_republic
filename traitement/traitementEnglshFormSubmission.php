@@ -4,13 +4,17 @@
 
 	/*table demande billet*/
 
-	if (isset($_POST["accept_condition_generale"]) || isset($_POST["demande_immediat"])) {
+	if (!empty($_POST["accept_condition_generale"])) {
 		$accept_condition_generale = "true";
-		$demande_immediat = "true";
 	}else{
 		$accept_condition_generale = "false";
+	}
+	if (!empty($_POST["demande_immediat"])) {
+		$demande_immediat = "true";
+	}else{
 		$demande_immediat = "false";
 	}
+
 	$apport_nourriture = $_POST["apport_nourriture"];
 	$apport_marchandise_taxable = $_POST["apport_marchandise_taxable"];
 	$ammount = $_POST["ammount"];
@@ -57,21 +61,39 @@
 
 	/*table profession, libelle = occupation*/
 	$libelle = $_POST["libelle"];
+	
 
-
-	if (isset($_POST["none"]) && isset($_POST["sorethoat"]) && isset($_POST["muscle_paain"]) && isset($_POST["headache"]) && isset($_POST["runny_nose"]) && isset(["cough"]) && isset($_POST["shaking_chills"]) && isset($_POST["breathing_difficulty"]) && isset($_POST["fatigue"]) && isset($_POST["fever"])) {
-		
+	if (!empty($_POST["none"])) {
 		$none = "true";
+	}
+	if (!empty($_POST["sorethoat"])) {
 		$sorethoat = "true";
+	}
+	if (!empty($_POST["muscle_paain"])) {
 		$muscle_paain = "true";
+	}
+	if (!empty($_POST["headache"])) {
 		$headache = "true";
+	}
+	if (!empty($_POST["runny_nose"])) {
 		$runny_nose = "true";
+	}
+	if (!empty(["cough"])) {
 		$cough = "true";
+	}
+	if (!empty($_POST["shaking_chills"])) {
 		$shaking_chills = "true";
+	}
+	if (!empty($_POST["breathing_difficulty"])) {
 		$breathing_difficulty = "true";
+	}
+	if (!empty($_POST["fatigue"])) {
 		$fatigue = "true";
+	}
+	if (!empty($_POST["fever"])) {
 		$fever = "true";
-	} else {
+	}
+	else{ 
 		$none = "false";
 		$sorethoat = "false";
 		$muscle_paain = "false";
