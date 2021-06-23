@@ -53,7 +53,7 @@ if (!empty($_GET["id"])) {
                         <div class="form-row">
                             <div class="name">Permanent address (*)</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="adresse_permanent">
+                                <input class="input--style-6" type="text" name="adresse_permanent" value="<?= isset($data["adresse_permanent"])? $data["adresse_permanent"]: '' ?>">
                             </div>
                         </div>
                         <div class="form-row">
@@ -136,7 +136,7 @@ if (!empty($_GET["id"])) {
                             <div class="name">Country of birth (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="pays_naissance" placeholder="">
+                                    <input class="input--style-6" type="" value="<?= isset($data["pays_naissance"])? $data["pays_naissance"]: '' ?>" name="pays_naissance" placeholder="">
                                 </div>
                             </div>
                         </div>
