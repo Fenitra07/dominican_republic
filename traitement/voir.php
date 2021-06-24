@@ -640,43 +640,15 @@ if (!empty($_GET["id"])) {
                                 </div>
                             </div>
                         </div>
-
-                        <!-- SUBMIT BOUTTON -->
-                       <!--  <div class="card-footer">
-                            <button class="btn btn--radius-2 btn--blue-2" type="submit">Finalise the application</button>
-                        </div> -->
-                        <!-- SUBMIT BOUTTON -->
-
           </div>
-          <!-- FIN de la partie 2 du formulaire -->
-
-                  <!-- </form> -->
-
-                  <!-- BOUTTON SUIVANT & PREVIOUS-->
-                       <!--  <div class="button_previous card_button_previous">
-                           <button class="btn btn--radius-2 btn--blue-2"  id="previous" onclick="MyFunctionprevious()"><a href="#section1">Previous</a></button>
-                        </div>
-                        <div class="card_button_next">
-                            <button class="btn btn--radius-2 btn--blue-2" id="next" onclick="MyFunctionNext()"><a href="#section1">Next</a></button>
-                        </div> -->
-
-
-                <!-- </div> SCRIPT JS : End 2nd part of FORM -->
-
+          
               </div>
             </div>
         </div>
     </div>
 
-    <!-- Jquery JS-->
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
-    <!-- Main JS-->
-    <!-- <script src="../assets/js/global.js"></script> -->
-    <!-- Form script (Select/option) + Button Next&Previous -->
-   <!--  <script src="../assets/js/form_script.js"></script -->
 
 </body>
 
 </html>
-<!-- end document-->
-
