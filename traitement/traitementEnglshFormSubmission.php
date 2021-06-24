@@ -67,18 +67,21 @@
 	VALUES ('$adresse_permanent', '$ville', '$etat', '$code_postal', '$type_voyage', '$is_arret_frequent')";
 	$conn->query($sql1);
 
-	/*$sqlSelectId = "SELECT id FROM information_adresse";
+	$sqlSelectId = "SELECT max(id) FROM information_adresse";
 	$result = $conn->query($sqlSelectId);
-	$row = $result->fetch_all();
-    var_dump($row);die();*/
+	$libelle = $result->fetch();
+  
 
 	 $sql2 = "INSERT INTO civilite (etat_civil)
 	 VALUES ('$etat_civil')";
-	 $conn->query($sql2);
+
+	$sqlSelectId = "SELECT max(id) FROM civilite";
+	$result = $conn->query($sqlSelectId);
+	$etat_civil = $result->fetch();
 
 	/*tokony mbola apina id infrmation adresse sy id etat_civil*/
-	 $sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_bard_port,flight_number,flight_date/*, profession_id, civilite_id*/)
-	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_bard_port', '$flight_number', '$flight_date'/*, '$libelle', '$etat_civil'*/)";
+	 $sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_bard_port,flight_number,flight_date, profession_id , civilite_id)
+	 VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_bard_port', '$flight_number', '$flight_date', '$libelle', '$etat_civil')";
 	 $conn->query($sql3);
 
 
