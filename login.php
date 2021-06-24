@@ -32,21 +32,21 @@
                 <div class="card-body">
 
 
-                    <form method="POST">
+                    <form method="POST" action="traitement/traitementLogin.php">
                       <!-- GENERAL INFORMATION -->
                       <h3 class="form_title">LOGIN TO YOUR DASHBOARD</h3>
 
                         <div class="form-row">
                             <div class="name">Login</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="">
+                                <input class="input--style-6" type="text" name="login">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Password</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="password" name="" placeholder="">
+                                    <input class="input--style-6" type="password" name="mdp" placeholder="">
                                 </div>
                             </div>
                         </div>

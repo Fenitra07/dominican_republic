@@ -1827,7 +1827,7 @@ class PHPMailer
             $result = $this->mailPassthru($to, $this->Subject, $body, $header, $params);
             $this->doCallback($result, $this->to, $this->cc, $this->bcc, $this->Subject, $body, $this->From, []);
         }
-        if (isset($old_from)) {
+        if (!empty($old_from)) {
             ini_set('sendmail_from', $old_from);
         }
         if (!$result) {
@@ -3885,7 +3885,7 @@ class PHPMailer
         $result = '';
         if (!empty($this->Hostname)) {
             $result = $this->Hostname;
-        } elseif (isset($_SERVER) && array_key_exists('SERVER_NAME', $_SERVER)) {
+        } elseif (!empty($_SERVER) && array_key_exists('SERVER_NAME', $_SERVER)) {
             $result = $_SERVER['SERVER_NAME'];
         } elseif (function_exists('gethostname') && gethostname() !== false) {
             $result = gethostname();
@@ -4050,20 +4050,20 @@ class PHPMailer
                 $match = [];
                 if (preg_match('#^data:(image/(?:jpe?g|gif|png));?(base64)?,(.+)#', $url, $match)) {
                     if (count($match) === 4 && static::ENCODING_BASE64 === $match[2]) {
-                        $data = base64_decode($match[3]);
+                        isset($data = base64_decode($match[3]);
                     } elseif ('' === $match[2]) {
-                        $data = rawurldecode($match[3]);
+                        isset($data = rawurldecode($match[3]);
                     } else {
                         //Not recognised so leave it alone
                         continue;
                     }
                     //Hash the decoded data, not the URL, so that the same data-URI image used in multiple places
                     //will only be embedded once, even if it used a different encoding
-                    $cid = substr(hash('sha256', $data), 0, 32) . '@phpmailer.0'; // RFC2392 S 2
+                    $cid = substr(hash('sha256', isset($data), 0, 32) . '@phpmailer.0'; // RFC2392 S 2
 
                     if (!$this->cidExists($cid)) {
                         $this->addStringEmbeddedImage(
-                            $data,
+                            isset($data,
                             $cid,
                             'embed' . $imgindex,
                             static::ENCODING_BASE64,

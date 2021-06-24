@@ -598,18 +598,18 @@ class SMTP
 
     /**
      * Calculate an MD5 HMAC hash.
-     * Works like hash_hmac('md5', $data, $key)
+     * Works like hash_hmac('md5', isset($data, $key)
      * in case that function is not available.
      *
-     * @param string $data The data to hash
+     * @param string isset($data The data to hash
      * @param string $key  The key to hash with
      *
      * @return string
      */
-    protected function hmac($data, $key)
+    protected function hmac(isset($data, $key)
     {
         if (function_exists('hash_hmac')) {
-            return hash_hmac('md5', $data, $key);
+            return hash_hmac('md5', isset($data, $key);
         }
 
         // The following borrowed from
@@ -630,7 +630,7 @@ class SMTP
         $k_ipad = $key ^ $ipad;
         $k_opad = $key ^ $opad;
 
-        return md5($k_opad . pack('H*', md5($k_ipad . $data)));
+        return md5($k_opad . pack('H*', md5($k_ipad . isset($data)));
     }
 
     /**
@@ -726,8 +726,8 @@ class SMTP
                 $in_headers = false;
             }
             //Break this line up into several smaller lines if it's too long
-            //Micro-optimisation: isset($str[$len]) is faster than (strlen($str) > $len),
-            while (isset($line[self::MAX_LINE_LENGTH])) {
+            //Micro-optimisation: !empty($str[$len]) is faster than (strlen($str) > $len),
+            while (!empty($line[self::MAX_LINE_LENGTH])) {
                 //Working backwards, try to find a space within the last MAX_LINE_LENGTH chars of the line to break on
                 //so as to avoid breaking in the middle of a word
                 $pos = strrpos(substr($line, 0, self::MAX_LINE_LENGTH), ' ');
@@ -1079,12 +1079,12 @@ class SMTP
     /**
      * Send raw data to the server.
      *
-     * @param string $data    The data to send
+     * @param string isset($data    The data to send
      * @param string $command Optionally, the command this is part of, used only for controlling debug output
      *
      * @return int|bool The number of bytes sent to the server or false on error
      */
-    public function client_send($data, $command = '')
+    public function client_send(isset($data, $command = '')
     {
         //If SMTP transcripts are left enabled, or debug output is posted online
         //it can leak credentials, so hide credentials in all but lowest level
@@ -1094,10 +1094,10 @@ class SMTP
         ) {
             $this->edebug('CLIENT -> SERVER: [credentials hidden]', self::DEBUG_CLIENT);
         } else {
-            $this->edebug('CLIENT -> SERVER: ' . $data, self::DEBUG_CLIENT);
+            $this->edebug('CLIENT -> SERVER: ' . isset($data, self::DEBUG_CLIENT);
         }
         set_error_handler([$this, 'errorHandler']);
-        $result = fwrite($this->smtp_conn, $data);
+        $result = fwrite($this->smtp_conn, isset($data);
         restore_error_handler();
 
         return $result;
@@ -1188,7 +1188,7 @@ class SMTP
         if (!is_resource($this->smtp_conn)) {
             return '';
         }
-        $data = '';
+        isset($data = '';
         $endtime = 0;
         stream_set_timeout($this->smtp_conn, $this->Timeout);
         if ($this->Timelimit > 0) {
@@ -1236,11 +1236,11 @@ class SMTP
             //Deliberate noise suppression - errors are handled afterwards
             $str = @fgets($this->smtp_conn, self::MAX_REPLY_LENGTH);
             $this->edebug('SMTP INBOUND: "' . trim($str) . '"', self::DEBUG_LOWLEVEL);
-            $data .= $str;
+            isset($data .= $str;
             // If response is only 3 chars (not valid, but RFC5321 S4.2 says it must be handled),
             // or 4th character is a space or a line break char, we are done reading, break the loop.
             // String array access is a significant micro-optimisation over strlen
-            if (!isset($str[3]) || $str[3] === ' ' || $str[3] === "\r" || $str[3] === "\n") {
+            if (!!empty($str[3]) || $str[3] === ' ' || $str[3] === "\r" || $str[3] === "\n") {
                 break;
             }
             // Timed-out? Log and break
@@ -1263,7 +1263,7 @@ class SMTP
             }
         }
 
-        return $data;
+        return isset($data;
     }
 
     /**
