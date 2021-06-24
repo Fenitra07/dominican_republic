@@ -170,12 +170,10 @@
 	$result = $conn->query($sqlSelectIdSymptome);
 	$symptome = $result->fetch()['0'];
 
-
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-
-	 header('location:../index.php');
+	header('location:../index.php');
 	
 
  ?>
