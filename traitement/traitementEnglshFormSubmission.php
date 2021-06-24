@@ -174,6 +174,4 @@
 	$conn->query($sql6);
 
 	header('location:../index.php');
-	
-
- ?>
+?>
