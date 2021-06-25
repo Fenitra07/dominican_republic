@@ -22,6 +22,9 @@
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.min.css">
 
 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 
 
 </head>

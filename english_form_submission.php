@@ -21,7 +21,7 @@
                 <div class="card-body" >
 
 
-              <form method="POST" action="traitement/traitementEnglshFormSubmission.php">
+              <form method="POST" action="traitement/traitementEnglshFormSubmission.php" >
 
 
                   <div id="part1">
@@ -31,14 +31,14 @@
                         <div class="form-row">
                             <div class="name">Permanent address (*)</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="adresse_permanent">
+                                <input class="input--style-6" type="text" name="adresse_permanent" id="myElement" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">City (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="ville" placeholder="">
+                                    <input class="input--style-6" type="" name="ville" id="myElementCity">
                                 </div>
                             </div>
                         </div>
@@ -707,7 +707,7 @@
 
                         <!-- SUBMIT BOUTTON -->
                         <div class="card-footer">
-                            <button class="btn btn--radius-2 btn--blue-2" type="submit">Finalise the application</button>
+                            <button class="btn btn--radius-2 btn--blue-2" type="submit" id="sweatAlert">Finalise the application</button>
                         </div>
                         <!-- SUBMIT BOUTTON -->
 
@@ -718,11 +718,16 @@
 
                   <!-- BOUTTON SUIVANT & PREVIOUS-->
                         <div class="button_previous card_button_previous">
-                           <button class="btn btn--radius-2 btn--blue-2" style="display: none" id="previous" onclick="MyFunctionprevious()"><a href="#section1">Previous</a></button>
+                           <a href="#section1">
+                              <button class="btn btn--radius-2 btn--blue-2" style="display: none" id="previous" onclick="MyFunctionprevious()">Previous</button>
+                            </a>
                         </div>
                         <div class="card_button_next">
-                            <button class="btn btn--radius-2 btn--blue-2" id="next" onclick="MyFunctionNext()"><a href="#section1">Next</a></button>
+                            <a href="#section1">
+                              <button class="btn btn--radius-2 btn--blue-2" id="next" style="" onclick="MyFunctionNext()" type="submit">Next</button>
+                            </a>
                         </div>
+
 
 
                 <!-- </div> SCRIPT JS : End 2nd part of FORM -->
@@ -731,6 +736,13 @@
             </div>
         </div>
     </div>
+
+<!-- FORM VALIDATION -->
+ <script type="text/javascript">
+
+
+ </script>
+<!-- FORM VALIDATION -->
 
     <!-- Jquery JS-->
     <script src="assets/vendor/jquery/jquery.min.js"></script>

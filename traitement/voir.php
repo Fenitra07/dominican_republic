@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 include('../connexion/connexion.php');
 
 if (!empty($_GET["id"])) {
  	$id = $_GET["id"];
-	
+
 	 $sqlVoir = "SELECT * FROM passager p
 		LEFT JOIN demande_billet db ON p.id = db.passager_id
 		LEFT JOIN profession pf ON p.profession_id = pf.id
@@ -221,7 +221,10 @@ if (!empty($_GET["id"])) {
                         <div id="r_arrival" >
                           <!-- "Do you make stops in other countries" = NO -->
                           <div id="r_no3" >
-                            <h3 class="form_title">FLIGHT INFORMATION</h3>
+                            <h3 class="form_title">
+                                FLIGHT INFORMATION <br>
+                                Arrival / "Do you make stops in other countries" = NO
+                            </h3>
                             <div class="form-row">
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
@@ -281,9 +284,12 @@ if (!empty($_GET["id"])) {
                           </div>
                           <!-- "Do you make stops in other countries" = NO -->
 
-                          <!-- "Do you make stops in other countries" = YES -->
+                          <!--  <br> -->
                           <div id="r_yes3" >
-                            <h3 class="form_title">FLIGHT INFORMATION</h3>
+                            <h3 class="form_title">
+                                FLIGHT INFORMATION <br>
+                                Arrival / "Do you make stops in other countries" = YES
+                            </h3>
                             <div class="form-row">
                                 <div class="name"><span class="name_option">Origin Port (*)</span></div>
                                 <div class="value">
@@ -372,7 +378,10 @@ if (!empty($_GET["id"])) {
 
                         <!-- Departure Condition Begin -->
                         <div id="r_departure" >
-                          <h3 class="form_title">FLIGHT INFORMATION</h3>
+                          <h3 class="form_title">
+                            FLIGHT INFORMATION <br>
+                            Departure
+                        </h3>
                           <div class="form-row">
                               <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                               <div class="value">
@@ -499,7 +508,7 @@ if (!empty($_GET["id"])) {
                         <div class="form-row">
                             <table>
                               <tr>
-                              	<?php 
+                              	<?php
 	                            	if ($data["none"] == "true") {
 	                            		$none = true;
 	                            	} else{
@@ -507,7 +516,7 @@ if (!empty($_GET["id"])) {
 	                            	}
                             	?>
                                 <td><input disabled class="" type="checkbox" <?= $none? "checked": ""  ?> name="none"><p>None</p></td>
-                                <?php 
+                                <?php
                                 	if ($data["sorethoat"] == "true") {
 	                            		$sorethoat = true;
 	                            	} else {
@@ -515,7 +524,7 @@ if (!empty($_GET["id"])) {
 	                            	}
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $sorethoat? "checked": ''  ?> name="sorethoat"><p>Sore throat</p></td>
-                                 <?php 
+                                 <?php
                                     if ($data["muscle_paain"] == "true") {
                                         $muscle_paain = true;
                                     } else {
@@ -526,7 +535,7 @@ if (!empty($_GET["id"])) {
                               </tr>
 
                               <tr>
-                                 <?php 
+                                 <?php
                                     if ($data["headache"] == "true") {
                                         $headache = true;
                                     } else {
@@ -534,7 +543,7 @@ if (!empty($_GET["id"])) {
                                     }
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $headache? "checked": ''  ?> name="headache"><p>Headache</p></td>
-                                <?php 
+                                <?php
                                     if ($data["runny_nose"] == "true") {
                                         $runny_nose = true;
                                     } else {
@@ -542,7 +551,7 @@ if (!empty($_GET["id"])) {
                                     }
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $runny_nose? "checked": ''  ?> name="runny_nose"><p>Runny nose</p></td>
-                                 <?php 
+                                 <?php
                                     if ($data["cough"] == "true") {
                                         $cough = true;
                                     } else {
@@ -553,7 +562,7 @@ if (!empty($_GET["id"])) {
                               </tr>
 
                               <tr>
-                                <?php 
+                                <?php
                                     if ($data["shaking_chills"] == "true") {
                                         $shaking_chills = true;
                                     } else {
@@ -561,7 +570,7 @@ if (!empty($_GET["id"])) {
                                     }
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $shaking_chills? "checked": ''  ?> name="shaking_chills"><p>Shaking chills</p></td>
-                                 <?php 
+                                 <?php
                                     if ($data["breathing_difficulty"] == "true") {
                                         $breathing_difficulty = true;
                                     } else {
@@ -569,7 +578,7 @@ if (!empty($_GET["id"])) {
                                     }
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $breathing_difficulty? "checked": ''  ?> name="breathing_difficulty"><p>Breathing difficulty</p></td>
-                                 <?php 
+                                 <?php
                                     if ($data["fatigue"] == "true") {
                                         $fatigue = true;
                                     } else {
@@ -579,7 +588,7 @@ if (!empty($_GET["id"])) {
                                 <td><input disabled class="" type="checkbox" <?= $fatigue? "checked": ''  ?> name="fatigue"><p>Fatigue</p></td>
                               </tr>
                               <tr>
-                                <?php 
+                                <?php
                                     if ($data["fever"] == "true") {
                                         $fever = true;
                                     } else {
@@ -611,7 +620,7 @@ if (!empty($_GET["id"])) {
                             </div>
                         </div>
                         <div class="form-row">
-                            <?php 
+                            <?php
                                     if ($data["accept_condition_generale"] == "true") {
                                         $accept_condition_generale = true;
                                     } else {
@@ -626,7 +635,7 @@ if (!empty($_GET["id"])) {
                             </div>
                         </div>
                         <div class="form-row">
-                            <?php 
+                            <?php
                                     if ($data["demande_immediat"] == "true") {
                                         $demande_immediat = true;
                                     } else {
@@ -641,7 +650,7 @@ if (!empty($_GET["id"])) {
                             </div>
                         </div>
           </div>
-          
+
               </div>
             </div>
         </div>

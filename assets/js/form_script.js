@@ -112,3 +112,8 @@ function stopCountry() {
       document.documentElement.scrollTop = 0;
     }
 
+// Sweat alert
+
+document.getElementById('sweatAlert').onclick = function(){
+  swal("Your application has been successfully registered", "Go to payment", "success");
+};

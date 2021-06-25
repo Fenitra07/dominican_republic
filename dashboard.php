@@ -45,11 +45,11 @@
           </div>
 
           <!-- TABLE WITCH CONTENT FORM VALUES -->
-          <?php 
-            
+          <?php
+
           ?>
 
-          <?php 
+          <?php
             $servername = "localhost";
             $username = "root";
             $password = "";
@@ -74,19 +74,21 @@
               <th style="width:16%;">Permanent address</th>
               <th style="width:16%;">Passport number</th>
               <th style="width:5%;">View</th>
-              <th style="width:8%;">Delete</th>
+              <th style="width:5%;">Delete</th>
+              <th style="width:5%;">status</th>
             </tr>
           <?php
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                  ?>    
+                  ?>
             <tr>
               <td><?php echo $row["noms"];?></td>
               <td><?php echo $row["nom_famille"];?></td>
               <td><?php echo $row["adresse_permanent"];?></td>
-              <td>PASSEPORT <?php echo $row["numero_passport"];?></td>
-              <td><a href="traitement/voir.php?id=<?= $row["id"]?>"><i class="fa fa-eye"></i></a></td>
-              <td><button class="btn btn-danger"><a href="traitement/delete.php?id=<?= $row["id"]?>"><i class="fa fa-trash"></i></a></button></td>
+              <td><?php echo $row["numero_passport"];?></td>
+              <td><a href="traitement/voir.php?id=<?= $row["id"]?>"><i class="fa fa-eye" style="color: black;"></i></a></td>
+              <td><button class="btn btn-danger"><a href="traitement/delete.php?id=<?= $row["id"]?>"><i class="fa fa-trash" style="color: white;"></i></a></button></td>
+              <td>Paid</td>
             </tr>
 
                   <?php
