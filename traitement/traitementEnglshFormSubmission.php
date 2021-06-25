@@ -155,6 +155,11 @@
 	VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$hotel_name','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_board_port', '$flight_number', '$flight_date' , '$accept_condition_generale', '$demande_immediat','$IdCivilitte', '$Civilite', '$InfoAdres')";
 	$row = $conn->query($sql3);
 
+// Database if ARRIVAL/YES
+	$sql3_1 = "INSERT INTO "
+
+
+
 	$sqlSelectIdPassager = "SELECT max(id) FROM passager";
 	$result = $conn->query($sqlSelectIdPassager);
 	$Passager = $result->fetch()['0'];
@@ -174,5 +179,5 @@
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-	// header('location:../english_form.php');
+	header('location:../english_form.php');
 ?>

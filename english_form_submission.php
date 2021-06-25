@@ -403,7 +403,7 @@
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="flight_number" placeholder="">
+                                        <input class="input--style-6" type="" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +411,7 @@
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" name="flight_date">
+                                        <input class="input--style-6" type="date" name="">
                                     </div>
                                 </div>
                             </div>
@@ -419,7 +419,7 @@
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="name_board_port" placeholder="">
+                                        <input class="input--style-6" type="" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +427,7 @@
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="flight_number" placeholder="">
+                                        <input class="input--style-6" type="" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -435,7 +435,7 @@
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" name="flight_date">
+                                        <input class="input--style-6" type="date" name="">
                                     </div>
                                 </div>
                             </div>
@@ -443,7 +443,7 @@
                                 <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <select class="input--style-6 select_style" name="disembarkation_port">
+                                        <select class="input--style-6 select_style" name="">
                                           <option>Select an option</option>
                                           <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
                                           <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
@@ -463,7 +463,7 @@
                                 <div class="name"><span class="name_option">Transportation company (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="transportation_company" placeholder="">
+                                        <input class="input--style-6" type="" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -471,7 +471,7 @@
                                 <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <select class="input--style-6 select_style" name="travel_purpose">
+                                        <select class="input--style-6 select_style" name="">
                                           <option>Select an option</option>
                                           <option>Visit friends and/or family</option>
                                           <option>Studies</option>
@@ -506,7 +506,7 @@
                               <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <select class="input--style-6 select_style" name="name_board_port">
+                                      <select class="input--style-6 select_style" name="">
                                         <option>Select an option</option>
                                         <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
                                         <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
@@ -526,7 +526,7 @@
                               <div class="name"><span class="name_option">Flight number (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="flight_number" placeholder="">
+                                      <input class="input--style-6" type="" name="" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -534,7 +534,7 @@
                               <div class="name"><span class="name_option">Flight date (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="date" name="flight_date">
+                                      <input class="input--style-6" type="date" name="">
                                   </div>
                               </div>
                           </div>
@@ -550,7 +550,7 @@
                               <div class="name"><span class="name_option">Transportation company (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="transportation_company" placeholder="">
+                                      <input class="input--style-6" type="" name="" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -558,7 +558,7 @@
                               <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <select class="input--style-6 select_style" name="travel_purpose">
+                                      <select class="input--style-6 select_style" name="">
                                         <option>Select an option</option>
                                         <option>Visit friends and/or family</option>
                                         <option>Studies</option>
@@ -576,7 +576,7 @@
                               <div class="name"><span class="name_option">Days of staying (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="days_staying" placeholder="">
+                                      <input class="input--style-6" type="" name="" placeholder="">
                                   </div>
                               </div>
                           </div>

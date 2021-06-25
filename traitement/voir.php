@@ -314,7 +314,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Days of staying (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["day_staying"])? $data["day_staying"]: '' ?>" name="days_staying" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data["days_staying"])? $data["days_staying"]: '' ?>" name="days_staying" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +339,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +347,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="date" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" name="flight_date">
+                                        <input disabled class="input--style-6" type="date" value="<?= isset($data[""])? $data[""]: '' ?>" name="">
                                     </div>
                                 </div>
                             </div>
@@ -355,7 +355,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["name_board_port"])? $data["name_board_port"]: '' ?>" name="name_board_port" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -363,7 +363,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -371,7 +371,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="date" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" name="flight_date">
+                                        <input disabled class="input--style-6" type="date" value="<?= isset($data[""])? $data[""]: '' ?>" name="">
                                     </div>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6 select_style" value="<?= isset($data["disembarkation_port"])? $data["disembarkation_port"]: '' ?>" name="disembarkation_port">
+                                        <input disabled class="input--style-6 select_style" value="<?= isset($data[""])? $data[""]: '' ?>" name="">
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Transportation company (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["transportation_company"])? $data["transportation_company"]: '' ?>" name="transportation_company" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -395,7 +395,7 @@ h1, h2, h3, h4 {
                                 <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
+                                        <input class="input--style-6 select_style" value="<?= isset($data[""])? $data[""]: '' ?>" name="">
                                     </div>
                                 </div>
                             </div>
@@ -423,7 +423,7 @@ h1, h2, h3, h4 {
                               <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6 select_style" value="<?= isset($data["name_board_port"])? $data["name_board_port"]: '' ?>" name="name_board_port">
+                                      <input disabled class="input--style-6 select_style" value="<?= isset($data[""])? $data[""]: '' ?>" name="">
                                   </div>
                               </div>
                           </div>
@@ -431,7 +431,7 @@ h1, h2, h3, h4 {
                               <div class="name"><span class="name_option">Flight number (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6" type="" value="<?= isset($data["flight_number"])? $data["flight_number"]: '' ?>" name="flight_number" placeholder="">
+                                      <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -439,7 +439,7 @@ h1, h2, h3, h4 {
                               <div class="name"><span class="name_option">Flight date (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6" value="<?= isset($data["flight_date"])? $data["flight_date"]: '' ?>" type="date" name="flight_date">
+                                      <input disabled class="input--style-6" value="<?= isset($data[""])? $data[""]: '' ?>" type="date" name="">
                                   </div>
                               </div>
                           </div>
@@ -455,7 +455,7 @@ h1, h2, h3, h4 {
                               <div class="name"><span class="name_option">Transportation company (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6" type="" value="<?= isset($data["transportation_company"])? $data["transportation_company"]: '' ?>" name="transportation_company" placeholder="">
+                                      <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                   </div>
                               </div>
                           </div>
@@ -463,7 +463,7 @@ h1, h2, h3, h4 {
                               <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
+                                      <input disabled class="input--style-6 select_style" value="<?= isset($data[""])? $data[""]: '' ?>" name="">
                                   </div>
                               </div>
                           </div>
@@ -471,7 +471,7 @@ h1, h2, h3, h4 {
                               <div class="name"><span class="name_option">Days of staying (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6" type="" value="<?= isset($data["day_staying"])? $data["day_staying"]: '' ?>" name="days_staying" placeholder="">
+                                      <input disabled class="input--style-6" type="" value="<?= isset($data[""])? $data[""]: '' ?>" name="" placeholder="">
                                   </div>
                               </div>
                           </div>
