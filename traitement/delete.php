@@ -2,7 +2,7 @@
 	include('../connexion/connexion.php');
 
 	if (!empty($_GET["id"])) {
-	 	$id = $_GET["id"]; 
+	 	$id = $_GET["id"];
 		$sqlDelete = "DELETE FROM demande_billet WHERE passager_id = $id;
 					  DELETE FROM profession WHERE id = $id;
 					  DELETE FROM symptome_has_passager WHERE passager_id = $id;

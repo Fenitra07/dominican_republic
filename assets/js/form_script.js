@@ -116,4 +116,27 @@ function stopCountry() {
 
 document.getElementById('sweatAlert').onclick = function(){
   swal("Your application has been successfully registered", "Go to payment", "success");
+  document.getElementById("sweatAlert").style.animationDuration = "3s";
 };
+
+document.getElementById('sweatAlertDelete').onclick = function deleteAlert(){
+  swal("Are you sure you want to delete ?", "Click ok if you want to process", "question");
+  document.getElementById("sweatAlertDelete").style.animationDuration = "3s";
+};
+
+document.getElementById('sweatAlertDelete').onclick = function(){
+  swal({
+    title: "Are you sure?",
+    text: "You will not be able to recover this imaginary file!",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonColor: '#DD6B55',
+    confirmButtonText: 'Yes, delete it!',
+    closeOnConfirm: false,
+    //closeOnCancel: false
+  },
+  function(){
+    swal("Deleted!", "Your imaginary file has been deleted!", "success");
+  });
+};
+

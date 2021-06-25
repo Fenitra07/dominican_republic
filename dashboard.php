@@ -87,7 +87,7 @@
               <td><?php echo $row["adresse_permanent"];?></td>
               <td><?php echo $row["numero_passport"];?></td>
               <td><a href="traitement/voir.php?id=<?= $row["id"]?>"><i class="fa fa-eye" style="color: black;"></i></a></td>
-              <td><button class="btn btn-danger"><a href="traitement/delete.php?id=<?= $row["id"]?>"><i class="fa fa-trash" style="color: white;"></i></a></button></td>
+              <td><a href="traitement/delete.php?id=<?= $row["id"]?>"><button class="btn btn-danger"><i class="fa fa-trash" style="color: white;"></i></button></a></td>
               <td>Paid</td>
             </tr>
 
