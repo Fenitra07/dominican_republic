@@ -25,23 +25,60 @@ if (!empty($_GET["id"])) {
 
 <head>
     <!-- Required meta tags-->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../assets/css/main.css" rel="stylesheet" media="all">
-    <link rel="../shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap5/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/bootstrap5/css/bootstrap.min.css">
+
+    <!-- Fonts & Fonticons -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/fonticons/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../assets/fonticons/css/font-awesome.min.css">
+
+
 </head>
 <style type="text/css">
   html {
   scroll-behavior: smooth;
 }
+
+h1, h2, h3, h4, p {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #ec3d3a;
+}
+
 </style>
 
 <body>
+
+
+
+
     <div class="page-wrapper" id="section1">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-body" >
 
+
+  <section class="section_top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+        <a href="../dashboard.php">
+           <button type="button" class="btn btn-info" style="border-radius: 50%; margin-top: 10px;">
+              <i class="fa fa-home" style="color: white;"></i>
+           </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
               <!-- <form method="POST" action="traitement/traitementEnglshFormSubmission.php"> -->
 
@@ -229,7 +266,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["name_bard_port"])? $data["name_bard_port"]: '' ?>" name="name_bard_port" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data["name_board_port"])? $data["name_board_port"]: '' ?>" name="name_board_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +290,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6 select_style" value="<?= isset($data["disembarktion_port"])? $data["disembarktion_port"]: '' ?>" name="disembarktion_port">
+                                        <input disabled class="input--style-6 select_style" value="<?= isset($data["disembarkation_port"])? $data["disembarkation_port"]: '' ?>" name="disembarkation_port">
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +355,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input disabled class="input--style-6" type="" value="<?= isset($data["name_bard_port"])? $data["name_bard_port"]: '' ?>" name="name_bard_port" placeholder="">
+                                        <input disabled class="input--style-6" type="" value="<?= isset($data["name_board_port"])? $data["name_board_port"]: '' ?>" name="name_board_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -358,7 +395,7 @@ if (!empty($_GET["id"])) {
                                 <div class="name"><span class="name_option">Travel purpose (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <select class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
+                                        <input class="input--style-6 select_style" value="<?= isset($data["travel_purpose"])? $data["travel_purpose"]: '' ?>" name="travel_purpose">
                                     </div>
                                 </div>
                             </div>
@@ -386,7 +423,7 @@ if (!empty($_GET["id"])) {
                               <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input disabled class="input--style-6 select_style" value="<?= isset($data["name_bard_port"])? $data["name_bard_port"]: '' ?>" name="name_bard_port">
+                                      <input disabled class="input--style-6 select_style" value="<?= isset($data["name_board_port"])? $data["name_board_port"]: '' ?>" name="name_board_port">
                                   </div>
                               </div>
                           </div>
@@ -451,8 +488,17 @@ if (!empty($_GET["id"])) {
           <!-- FINAL STEP -->
           <!-- <div> SCRIPT JS : Begin 2nd part of FORM -->
 
+
+
+
                           <h3 class="form_title">FINAL STEP - Customs and public health information</h3>
                         <div class="form-row">
+                            <div class="name">Do you bring with you or in your luggage a sum of money or other means of payment exceeding USD 10,000 or the equivalent in another currency?</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input disabled class="input--style-6" type="" value="<?= isset($data["apportMontant"])? $data["apportMontant"]: '' ?>" name="apportMontant" placeholder="">
+                                </div>
+                            </div>
                         </div>
                         <!-- yes condition begin -->
                         <div id="r_yes2" >
@@ -494,10 +540,12 @@ if (!empty($_GET["id"])) {
                             <div class="name">Do you bring taxable goods with you or in your luggage? </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" value="<?= isset($data["apport_marchandise_taxable"])? $data["apport_marchandise_taxable"]: '' ?>" name="apport_marchandise_taxable">
+                                    <input disabled class="input--style-6 select_style" value="<?= isset($data["apport_marchandise_taxable"])? $data["apport_marchandise_taxable"]: '' ?>" name="apport_marchandise_taxable">
                                 </div>
                             </div>
                         </div>
+
+
 
 
 
@@ -656,7 +704,10 @@ if (!empty($_GET["id"])) {
         </div>
     </div>
 
+    <!-- Jquery JS-->
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Main JS-->
+    <script src="../assets/js/global.js"></script>
 
 </body>
 

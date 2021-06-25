@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="assets/css/main.css" rel="stylesheet" media="all">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap5/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/bootstrap5/css/bootstrap.min.css">
+  </script>
 </head>
 <style type="text/css">
   html {
@@ -21,7 +24,7 @@
                 <div class="card-body" >
 
 
-              <form method="POST" action="traitement/traitementEnglshFormSubmission.php" >
+              <form method="POST" action="traitement/traitementEnglshFormSubmission.php" id="needs-validation" novalidate>
 
 
                   <div id="part1">
@@ -29,24 +32,32 @@
                       <h3 class="form_title">1ST STEP - GENERAL INFORMATION</h3>
                       <p class="form_paragraph">Please provide your address</p>
                         <div class="form-row">
-                            <div class="name">Permanent address (*)</div>
+                            <div class="name">
+                              <label class="text-inverse" for="validationCustom01">Permanent address (*)</label>
+                            </div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="adresse_permanent" id="myElement" required>
+                                <input class="input--style-6" type="text" name="adresse_permanent" id="validationCustom01" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">City (*)</div>
+                            <div class="name">
+                              <label class="text-inverse" for="validationCustom02">City (*)</label>
+                            </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="ville" id="myElementCity">
+                                    <input class="input--style-6" type="" name="ville" id="validationCustom02" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">State (*)</div>
+                            <div class="name">
+                              <label for="validationCustom03">
+                                State (*)
+                              </label>
+                            </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="etat" placeholder="">
+                                    <input class="input--style-6" type="" name="etat" id="validationCustom03" required>
                                 </div>
                             </div>
                         </div>
@@ -59,14 +70,21 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Arrival or Departure (*)</div>
+                            <div class="name">
+                              <label for="select-menu">
+                                Arrival or Departure (*)
+                              </label>
+                            </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" name="type_voyage" id="movement" onclick="myMovement()">
+                                    <select class="input--style-6 select_style custom-select" name="type_voyage" id="movement" onclick="myMovement()" required>
                                       <option>Select an option</option>
                                       <option>Arrival</option>
                                       <option>Departure</option>
                                     </select>
+                                    <div class="invalid-feedback">
+                                      Please selected any option.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -152,12 +170,12 @@
                             <div class="value">
                                 <div class="input-group">
                                     <select name="etat_civil" class="input--style-6 select_style">
-                                      <option value="1">Select an option</option>
-                                      <option value="2">Free Union</option>
-                                      <option value="3">Concubinage</option>
-                                      <option value="4">Married</option>
-                                      <option value="5">Single</option>
-                                      <option value="6">Other</option>
+                                      <option value="">Select an option</option>
+                                      <option value="Free Union">Free Union</option>
+                                      <option value="Concubinage">Concubinage</option>
+                                      <option value="Married">Married</option>
+                                      <option value="Single">Single</option>
+                                      <option value="Other">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -168,36 +186,36 @@
                                 <div class="input-group">
                                     <select class="input--style-6 select_style" name="libelle">
                                       <option>Select an option</option>
-                                      <option value="1">Actor</option>
-                                      <option value="2">Analyst</option>
-                                      <option value="3">Artist</option>
-                                      <option value="4">Baker</option>
-                                      <option value="5">Blacksmith</option>
-                                      <option value="6">Carpenter</option>
-                                      <option value="7">Cashier</option>
-                                      <option value="8">CEO</option>
-                                      <option value="9">Consultant</option>
-                                      <option value="10">Craftman</option>
-                                      <option value="11">Doctor</option>
-                                      <option value="12">Electrician</option>
-                                      <option value="13">Engineer</option>
-                                      <option value="14">Entrepreneur</option>
-                                      <option value="15">Firefighter</option>
-                                      <option value="16">Freelancer</option>
-                                      <option value="17">Graphic Designer</option>
-                                      <option value="18">Journalist</option>
-                                      <option value="19">Lawyer</option>
-                                      <option value="20">Merchant</option>
-                                      <option value="21">Painter</option>
-                                      <option value="22">Private employee</option>
-                                      <option value="23">Public employee</option>
-                                      <option value="24">Salesman</option>
-                                      <option value="25">Shoemaker</option>
-                                      <option value="26">Student</option>
-                                      <option value="27">Teacher</option>
-                                      <option value="28">Truck driver</option>
-                                      <option value="29">Worker</option>
-                                      <option value="30">Others</option>
+                                      <option value="Actor">Actor</option>
+                                      <option value="Analyst">Analyst</option>
+                                      <option value="Artist">Artist</option>
+                                      <option value="Baker">Baker</option>
+                                      <option value="Blacksmith">Blacksmith</option>
+                                      <option value="Carpenter">Carpenter</option>
+                                      <option value="Cashier">Cashier</option>
+                                      <option value="CEO">CEO</option>
+                                      <option value="Consultant">Consultant</option>
+                                      <option value="Craftman">Craftman</option>
+                                      <option value="Doctor">Doctor</option>
+                                      <option value="Electrician">Electrician</option>
+                                      <option value="Engineer">Engineer</option>
+                                      <option value="Entrepreneur">Entrepreneur</option>
+                                      <option value="Firefighter">Firefighter</option>
+                                      <option value="Freelancer">Freelancer</option>
+                                      <option value="Graphic Designer">Graphic Designer</option>
+                                      <option value="Journalist">Journalist</option>
+                                      <option value="Lawyer">Lawyer</option>
+                                      <option value="Merchant">Merchant</option>
+                                      <option value="Painter">Painter</option>
+                                      <option value="Private employee">Private employee</option>
+                                      <option value="Public employee">Public employee</option>
+                                      <option value="Salesman">Salesman</option>
+                                      <option value="Shoemaker">Shoemaker</option>
+                                      <option value="Student">Student</option>
+                                      <option value="Teacher">Teacher</option>
+                                      <option value="Truck driver">Truck driver</option>
+                                      <option value="Worker">Worker</option>
+                                      <option value="Others">Others</option>
                                     </select>
                                 </div>
                             </div>
@@ -207,6 +225,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <select class="input--style-6 select_style" name="accept_sejour_hotel"  id="operation1" onclick="myOperation1()">
+                                      <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
                                     </select>
@@ -292,7 +311,7 @@
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="name_bard_port" placeholder="">
+                                        <input class="input--style-6" type="" name="name_board_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +335,7 @@
                                 <div class="name"><span class="name_option">Disembarkation port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <select class="input--style-6 select_style" name=disembarktion_port>
+                                        <select class="input--style-6 select_style" name=disembarkation_port>
                                           <option>Select an option</option>
                                           <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
                                           <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
@@ -400,7 +419,7 @@
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="name_bard_port" placeholder="">
+                                        <input class="input--style-6" type="" name="name_board_port" placeholder="">
                                     </div>
                                 </div>
                             </div>
@@ -487,7 +506,7 @@
                               <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <select class="input--style-6 select_style" name="name_bard_port">
+                                      <select class="input--style-6 select_style" name="name_board_port">
                                         <option>Select an option</option>
                                         <option>SDQ - AEROPUERTO INTERNACIONAL DE LAS AMERICAS</option>
                                         <option>PUJ - AEROPUERTO INTERNACIONAL DE PUNTA CANA</option>
@@ -563,7 +582,11 @@
                           </div>
                         </div>
                         <!-- Departure Condition End -->
-
+                        <div class="card_button_next">
+                            <a href="">
+                              <button class="btn btn--radius-2 btn--blue-2" type="submit" onclick="formValidation()" style="display: none;">Check</button>
+                            </a>
+                        </div>
 
             </div>
 
@@ -579,7 +602,7 @@
                             <div class="name">Do you bring with you or in your luggage a sum of money or other means of payment exceeding USD 10,000 or the equivalent in another currency?</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6 select_style" id="operation2" onclick="myOperation2()">
+                                    <select class="input--style-6 select_style" id="operation2" onclick="myOperation2()" name="apportMontant">
                                       <option>Select an option</option>
                                       <option>No</option>
                                       <option>Yes</option>
@@ -689,7 +712,10 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name"><input value="false" type="checkbox" name="accept_condition_generale"></div>
+                            <div class="name">
+                              <input value="false" type="checkbox" name="accept_condition_generale" required>
+                              <span class="custom-control-indicator"></span>
+                            </div>
                             <div class="value">
                                 <div class="input-group">
                                     <span>I accept the general conditions of sale and use and I certify on my honour the accuracy of the information provided. It's reminded that any person making a false declaration on behalf of himself or herself or another person may be liable to the penalties provided for in articles 441-1 of the penal code and following. </span>
@@ -739,7 +765,6 @@
 
 <!-- FORM VALIDATION -->
  <script type="text/javascript">
-
 
  </script>
 <!-- FORM VALIDATION -->

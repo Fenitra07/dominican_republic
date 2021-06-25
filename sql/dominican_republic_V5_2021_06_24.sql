@@ -65,6 +65,7 @@ CREATE TABLE IF NOT EXISTS `demande_billet` (
   `apport_bagage` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `apport_nourriture` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `apport_marchandise_taxable` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `apportMontant` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `ammount` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `currency` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `declare_origin_security` varchar(255) COLLATE utf8mb4_bin NOT NULL,
@@ -78,10 +79,10 @@ CREATE TABLE IF NOT EXISTS `demande_billet` (
 -- Dumping data for table `demande_billet`
 --
 
-INSERT INTO `demande_billet` (`id`, `apport_bagage`, `apport_nourriture`, `apport_marchandise_taxable`, `ammount`, `currency`, `declare_origin_security`, `passager_id`) VALUES
-(4, NULL, 'Yes', 'Yes', 'aa', 'aa', 'aa', 10),
-(5, NULL, 'Yes', 'No', 'ss', 'ss', 'ss', 11),
-(12, NULL, 'Yes', 'No', 'qq', 'qq', 'qq', 18);
+INSERT INTO `demande_billet` (`id`, `apport_bagage`, `apport_nourriture`, `apport_marchandise_taxable`, `apportMontant`, `ammount`, `currency`, `declare_origin_security`, `passager_id`) VALUES
+(4, NULL, 'Yes', 'Yes', 'Yes', 'aa', 'aa', 'aa', 10),
+(5, NULL, 'Yes', 'No', 'No', 'ss', 'ss', 'ss', 11),
+(12, NULL, 'Yes', 'No', 'No', 'qq', 'qq', 'qq', 18);
 
 -- --------------------------------------------------------
 
@@ -150,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `passager` (
   `disembarkation_port` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `transportation_company` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `flight_number` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
-  `name_bard_port` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `name_board_port` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `flight_date` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `accept_condition_generale` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `demande_immediat` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
@@ -168,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `passager` (
 -- Dumping data for table `passager`
 --
 
-INSERT INTO `passager` (`id`, `noms`, `nom_famille`, `date_naissance`, `genre`, `pays_naissance`, `pays_nationnalite`, `numero_passport`, `accept_sejour_hotel`, `email`, `numero`, `stay_hotel`, `province`, `municipality`, `section`, `hotel_name`, `travel_purpose`, `days_staying`, `origin_port`, `disembarkation_port`, `transportation_company`, `flight_number`, `name_bard_port`, `flight_date`, `accept_condition_generale`, `demande_immediat`, `profession_id`, `civilite_id`, `information_adresse_id`) VALUES
+INSERT INTO `passager` (`id`, `noms`, `nom_famille`, `date_naissance`, `genre`, `pays_naissance`, `pays_nationnalite`, `numero_passport`, `accept_sejour_hotel`, `email`, `numero`, `stay_hotel`, `province`, `municipality`, `section`, `hotel_name`, `travel_purpose`, `days_staying`, `origin_port`, `disembarkation_port`, `transportation_company`, `flight_number`, `name_board_port`, `flight_date`, `accept_condition_generale`, `demande_immediat`, `profession_id`, `civilite_id`, `information_adresse_id`) VALUES
 (9, 'ttt', 'tt', '2021-06-17', 'Feminine', 'test', 'test', 'test', 'true', 'ttt', 'tt', NULL, 'Select an option', '', '', NULL, 'Convention â€“ Conference', 'tttt', '', 'Select an option', 'tttt', 'ttt', 'POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA', '2021-06-24', 'true', 'true', 32, 46, 127),
 (10, 'aa', 'aa', '2021-06-24', 'Feminine', 'aa', 'aa', 'aa', 'true', 'aa', 'aa', NULL, 'Select an option', '', '', NULL, 'Convention â€“ Conference', 'aa', '', 'Select an option', 'aa', 'aa', 'STI - AEROPUERTO INTERNACIONAL DEL CIBAO', '2021-06-24', 'true', 'true', 33, 47, 128),
 (11, 'ss', 'ss', '2021-06-24', 'Feminine', 'ss', 'ss', 'ss', 'No', 'ss', 'ss', NULL, 'La Altagracia', 'ss', 'ss', NULL, 'Select an option', '', 'ss', 'POP - AEROPUERTO INTERNACIONAL GREGORIO LUPERON, PUERTO PLATA', '', '', 'Select an option', '', 'false', 'true', 34, 48, 129),

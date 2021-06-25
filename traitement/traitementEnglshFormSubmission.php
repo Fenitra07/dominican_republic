@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	include('../connexion/connexion.php');
 
@@ -17,6 +17,7 @@
 
 	$apport_nourriture = $_POST["apport_nourriture"];
 	$apport_marchandise_taxable = $_POST["apport_marchandise_taxable"];
+	$apportMontant = $_POST["apportMontant"];
 	$ammount = $_POST["ammount"];
 	$currency = $_POST["currency"];
 	$declare_origin_security = $_POST["declare_origin_security"];
@@ -51,7 +52,7 @@
 	$origin_port = $_POST["origin_port"];
 	$disembarkation_port = $_POST["disembarkation_port"];
 	$transportation_company = $_POST["transportation_company"];
-	$name_bard_port = $_POST["name_bard_port"];
+	$name_board_port = $_POST["name_board_port"];
 	$flight_number = $_POST["flight_number"];
 	$flight_date = $_POST["flight_date"];
 
@@ -61,7 +62,7 @@
 
 	/*table profession, libelle = occupation*/
 	$libelle = $_POST["libelle"];
-	
+
 
 	if (!empty($_POST["none"])) {
 		$none = "true";
@@ -110,7 +111,7 @@
 	}
 	if (!empty($_POST["fever"])) {
 		$fever = "true";
-	}else{ 
+	}else{
 		$fever = "false";
 	}
 
@@ -132,7 +133,7 @@
 	$sqlSelectIdIProfession = "SELECT max(id) FROM profession";
 	$result = $conn->query($sqlSelectIdIProfession);
 	$IdCivilitte = $result->fetch()['0'];
-	
+
 	$sql1 = "INSERT INTO information_adresse (adresse_permanent, ville, etat, code_postal, type_voyage, is_arret_frequent)
 	VALUES ('$adresse_permanent', '$ville', '$etat', '$code_postal', '$type_voyage', '$is_arret_frequent')";
 	$conn->query($sql1);
@@ -150,16 +151,16 @@
 	$Civilite = $result->fetch()['0'];
 
 	/*tokony mbola apina id infrmation adresse sy id etat_civil*/
-	$sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_bard_port,flight_number,flight_date , accept_condition_generale, demande_immediat, profession_id, civilite_id, 	information_adresse_id)
-	VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_bard_port', '$flight_number', '$flight_date' , '$accept_condition_generale', '$demande_immediat','$IdCivilitte', '$Civilite', '$InfoAdres')";
+	$sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,hotel_name,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_board_port,flight_number,flight_date , accept_condition_generale, demande_immediat, profession_id, civilite_id, 	information_adresse_id)
+	VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$hotel_name','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_board_port', '$flight_number', '$flight_date' , '$accept_condition_generale', '$demande_immediat','$IdCivilitte', '$Civilite', '$InfoAdres')";
 	$row = $conn->query($sql3);
 
 	$sqlSelectIdPassager = "SELECT max(id) FROM passager";
 	$result = $conn->query($sqlSelectIdPassager);
 	$Passager = $result->fetch()['0'];
 
-	 $sql4 = "INSERT INTO demande_billet (ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, passager_id )
-	 VALUES ('$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$Passager')";
+	 $sql4 = "INSERT INTO demande_billet (apportMontant, ammount, currency, declare_origin_security, apport_nourriture, apport_marchandise_taxable, passager_id )
+	 VALUES ('$apportMontant', '$ammount', '$currency', '$declare_origin_security', '$apport_nourriture', '$apport_marchandise_taxable', '$Passager')";
 	$conn->query($sql4);
 
 
@@ -173,5 +174,5 @@
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-	header('location:../index.php');
+	// header('location:../english_form.php');
 ?>
