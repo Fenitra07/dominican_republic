@@ -54,7 +54,16 @@
 	$transportation_company = $_POST["transportation_company"];
 	$name_board_port = $_POST["name_board_port"];
 	$flight_number = $_POST["flight_number"];
+	$flight_number_yes = $_POST["flight_number_yes"];
 	$flight_date = $_POST["flight_date"];
+	$flight_date_yes = $_POST["flight_date_yes"];
+	$boarding_port_yes = $_POST["boarding_port_yes"];
+	$flight_number_yes_2 = $_POST["flight_number_yes_2"];
+	$flight_date_yes_2 = $_POST["flight_date_yes_2"];
+	$disembarkation_port_yes = $_POST["disembarkation_port_yes"];
+	$transportation_company_yes = $_POST["transportation_company_yes"];
+	$travel_purpose_yes = $_POST["travel_purpose_yes"];
+	$days_staying_yes = $_POST["days_staying_yes"];
 
 
 	/*table civlité*/
@@ -151,12 +160,12 @@
 	$Civilite = $result->fetch()['0'];
 
 	/*tokony mbola apina id infrmation adresse sy id etat_civil*/
-	$sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,hotel_name,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_board_port,flight_number,flight_date , accept_condition_generale, demande_immediat, profession_id, civilite_id, 	information_adresse_id)
-	VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$hotel_name','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_board_port', '$flight_number', '$flight_date' , '$accept_condition_generale', '$demande_immediat','$IdCivilitte', '$Civilite', '$InfoAdres')";
+	$sql3 = "INSERT INTO passager (noms, nom_famille, date_naissance, genre, pays_naissance, pays_nationnalite, numero_passport,accept_sejour_hotel, email, numero,province,municipality,section,hotel_name,travel_purpose,days_staying,origin_port,disembarkation_port, transportation_company,name_board_port,flight_number,flight_date , accept_condition_generale, demande_immediat, profession_id, civilite_id, 	information_adresse_id, flight_number_yes, flight_date_yes, boarding_port_yes, flight_number_yes_2, flight_date_yes_2, disembarkation_port_yes, transportation_company_yes, travel_purpose_yes, days_staying_yes)
+	VALUES ('$noms', '$nom_famille', '$date_naissance', '$genre', '$pays_naissance', '$pays_nationnalite', '$numero_passport','$accept_sejour_hotel', '$email', '$numero','$province','$municipality','$section','$hotel_name','$travel_purpose', '$days_staying', '$origin_port', '$disembarkation_port', '$transportation_company', '$name_board_port', '$flight_number', '$flight_date' , '$accept_condition_generale', '$demande_immediat','$IdCivilitte', '$Civilite', '$InfoAdres', '$flight_number_yes', '$flight_date_yes', '$boarding_port_yes', '$flight_number_yes_2', '$flight_date_yes_2', '$disembarkation_port_yes', '$transportation_company_yes', '$travel_purpose_yes', '$days_staying_yes')";
 	$row = $conn->query($sql3);
 
 // Database if ARRIVAL/YES
-	$sql3_1 = "INSERT INTO "
+	$sql3_1 = "INSERT INTO ";
 
 
 
