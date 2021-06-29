@@ -1,3 +1,5 @@
+<script src="../assets/js/form_script.js"></script>
+
 <?php
 
 	include('../connexion/connexion.php');
@@ -195,5 +197,5 @@
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-	header('location:../english_form.php');
+	header('location:../e-ticket-application.php');
 ?>

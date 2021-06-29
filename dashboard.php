@@ -24,6 +24,8 @@
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.min.css">
 
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
 
@@ -87,7 +89,7 @@
               <td><?php echo $row["adresse_permanent"];?></td>
               <td><?php echo $row["numero_passport"];?></td>
               <td><a href="traitement/voir.php?id=<?= $row["id"]?>"><i class="fa fa-eye" style="color: black;"></i></a></td>
-              <td><a href="traitement/delete.php?id=<?= $row["id"]?>"><button class="btn btn-danger"><i class="fa fa-trash" style="color: white;"></i></button></a></td>
+              <td><a href="traitement/delete.php?id=<?= $row["id"]?>"><button class="btn btn-danger" id="suppAlert"><i class="fa fa-trash" style="color: white;"></i></button></a></td>
               <td>Paid</td>
             </tr>
 
@@ -131,6 +133,15 @@
   </section>
 
 
+<script type="text/javascript">
+ document.getElementById('suppAlert').onclick = function(){
+  swal("The information has been successfully removed", "", "success");
+
+};
+</script>
+
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 
   <!-- SCRIPTS -->
     <script src="assets/js/table.js"></script>

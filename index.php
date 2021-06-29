@@ -22,11 +22,12 @@
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="assets/fonticons/css/font-awesome.min.css">
 
-
-
-
 </head>
 <body>
+
+    <?php
+    include("cookie.php");
+    ?>
 
     <?php
     include("navbar.php");
@@ -42,7 +43,7 @@
         <div id="portal" class="col-md-5 mobile_padding_bottom">
             <p>PORTAL TO APPLY FOR E-TICKETS TO ENTER OR LEAVE THE DOMINICAN REPUBLIC</p>
             <center>
-              <a href="english_form.php">
+              <a href="e-ticket-application.php">
                 <button type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round"><span>ENTER THE FORM</span>
                   <div class="icon icon-round d-flex align-items-center justify-content-center">
                     <i class="fa fa-paper-plane"></i>
@@ -63,7 +64,7 @@
           <h3 class="texte_blanc interligne">WHAT IS THE E-TICKET</h3>
           <p class="texte_blanc interligne">The E-Ticket is a mandatory document that provides the necessary information to each passenger wishing to enter and leave the Dominican Republic. This information is required by the General Office of Immigration and Customs and the Ministry of Public Health of the Dominican Republic.</p>
           <center>
-              <a href="english_form.php">
+              <a href="e-ticket-application.php">
                 <button type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round" ><span>ENTER THE FORM</span>
                   <div class="icon icon-round d-flex align-items-center justify-content-center">
                     <i class="fa fa-paper-plane"></i>
@@ -99,7 +100,7 @@
               </div>
             </div>
           <center>
-            <a href="english_form.php">
+            <a href="e-ticket-application.php">
               <button id="enter_the_form" type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round"><span>ENTER THE FORM</span>
                 <div class="icon icon-round d-flex align-items-center justify-content-center">
                   <i class="fa fa-paper-plane"></i>

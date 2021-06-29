@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../assets/bootstrap5/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/bootstrap5/css/bootstrap.min.css">
+  </script>
+</head>
+
+<style type="text/css">
+
+</style>
+
+<body>
+
+<div class="container-fluid">
+    <form>
+      <label class="mail">Name</label>
+      <input onmouseover="checknamelength(this)" type="text" id="name" name="name"><br>
+      <label class="mail">Firstname</label>
+      <input onmouseup="checknamelength(this)" type="text" id="firstname" name="firstname"><br>
+      <label class="mail">Mail</label>
+      <input onmouseup="checknamelength(this)" type="mail" id="mail" name="mail"><br>
+      <button type="button" id='button1' class="btn-success">Envoyer</button>
+    </form>
+        <div class="alert alert-danger" id="error-name" style="display: none;">
+          <strong >*Too large</strong>
+        </div>
+        <div class="alert alert-danger" id="error-name1" style="display: none;">
+          <strong >*Please insert element</strong>
+        </div>
+
+    </div>
+    <div id="result" class="container-fluid">
+    </div>
+
+<script type="text/javascript">
+
+var firstInput = document.getElementById("name");
+var secondInput = document.getElementById("firstname");
+var thirdInput = document.getElementById("mail");
+var firstLabel = document.getElementsByTagName("label")[1];
+var firstClass = document.getElementsByClassName("mail")[0];
+// console.log(document.getElementsByTagName("input").length);
+// firstInput.style.borderColor = "grey";
+// firstInput.style.backgroundColor = "azure";
+// secondInput.style.borderColor = "grey";
+// secondInput.style.backgroundColor = "azure";
+// thirdInput.style.borderColor = "grey";
+// thirdInput.style.backgroundColor = "azure";
+// firstLabel.style.color = "blue";
+// firstClass.style.color = "red";
+
+var button1 = document.getElementById("button1");
+// button1.style.disabled = "disabled";
+
+var errorName = document.getElementById('error-name');
+var errorName1 = document.getElementById('error-name1');
+</script>
+
+<!--
+<script type="text/javascript">
+button1.onclick = function(){
+  if (firstInput.value=='') {
+    errorName1.style.display = "block";
+    firstInput.style.borderColor = "red";
+  } else {
+    errorName1.style.display = "none";
+    firstInput.style.borderColor = "grey";
+
+    var p = document.createElement("p");
+    var text = document.createTextNode("your name is "+firstInput.value);
+    p.appendChild(text);
+
+    var div = document.getElementById("result");
+    div.appendChild(p);
+  }
+  if (secondInput.value=='') {
+    errorName1.style.display = "block";
+    secondInput.style.borderColor = "red";
+  } else {
+    errorName1.style.display = "none";
+    secondInput.style.borderColor = "grey";
+  }
+  if (thirdInput.value=='') {
+    errorName1.style.display = "block";
+    thirdInput.style.borderColor = "red";
+  } else {
+    errorName1.style.display = "none";
+    thirdInput.style.borderColor = "grey";
+  }
+}
+</script> -->
+
+
+
+<script type="text/javascript">
+  function checknamelength(element) {
+  console.log(element.value)
+  if (element.value =='') {
+    errorName.style.display = "block";
+    element.style.borderColor = "red";
+  } else {
+    errorName.style.display = "none";
+    element.style.borderColor = "grey";
+  }
+}
+// ---
+</script>
+
+
+</body>
+</html>
+

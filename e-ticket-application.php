@@ -30,6 +30,10 @@
 </head>
 <body>
 
+  <?php
+    include("cookie.php");
+  ?>
+
    <?php
     include("navbar.php");
     ?>
