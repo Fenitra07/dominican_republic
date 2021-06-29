@@ -1,3 +1,24 @@
+<?php
+session_start();
+if(isset($_SESSION['user']))
+{
+include('connexion/connexion.php');
+
+10 mins in seconds
+$inactive = 10;
+if( !isset($_SESSION['timeout']) )
+$_SESSION['timeout'] = time() + $inactive;
+
+$session_life = time() - $_SESSION['timeout'];
+
+if($session_life > $inactive)
+{  session_destroy(); header("location:login.php");     }
+
+$_SESSION['timeout']=time();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -5,11 +26,11 @@
       <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/ionicon.min.css">
       <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+
    </head>
 
    <body>
 
-<!-- Class active ho an'ny navbar mbola tsy misy -->
 
       <!-- Section: Header -->
       <header class="header">
@@ -42,7 +63,7 @@
                      <span class="barre_navbar">&#124;</span>
                      <li class="menu-item"><a href="dashboard_termAndCondition.php">Terms & Conditions</a></li>
                      <span class="barre_navbar">&#124;</span>
-                     <li class="menu-item"><a href="login.php"><i class="fa fa-power-off"></i></a></li>
+                     <li class="menu-item"><a href="traitement/session_destroy.php"><i class="fa fa-power-off"></i></a></li>
                   </ul>
                </nav>
             </div>
@@ -56,3 +77,12 @@
 </body>
 
 </html>
+
+
+<?php
+}
+else{
+    header("location:login.php");
+}
+
+?>

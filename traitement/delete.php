@@ -20,8 +20,10 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../assets/fonticons/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="../assets/fonticons/css/font-awesome.min.css">
-
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Sweatalerts -->
+  <script type="text/javascript" src="js/sweetalert2.all.js"></script>
+  <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <body>
@@ -40,6 +42,13 @@
 
 		$result = $conn->query($sqlDelete);
 
+    // Function defnition
+    function function_alert($message) {
+      // Display the alert box
+      echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+    // Function call
+    function_alert("The information has been successfully removed");
 		header("location: ../dashboard.php");
 	}
 ?>

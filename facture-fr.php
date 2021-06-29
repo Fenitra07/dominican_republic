@@ -1,3 +1,24 @@
+<?php
+
+include('connexion/connexion.php');
+
+if (!empty($_GET["id"])) {
+  $id = $_GET["id"];
+
+   $sqlVoir = "SELECT * FROM passager p
+    LEFT JOIN demande_billet db ON p.id = db.passager_id
+    LEFT JOIN profession pf ON p.profession_id = pf.id
+    LEFT JOIN symptome_has_passager shp ON p.id = shp.passager_id
+    LEFT JOIN symptome s ON shp.symptome_id= s.id
+    LEFT JOIN civilite c ON p.civilite_id = c.id
+    LEFT JOIN information_adresse ia ON p.information_adresse_id = ia.id
+    WHERE p.id = $id";
+
+     $result = $conn->query($sqlVoir);
+       $data = $result->fetch();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +50,7 @@
             <span class="invoice-info-label">FACTURE: </span>
 
             <!-- Atao auto-incrémenté -->
-            <span class="red">#121212</span>
+            <span class="red">#<?= isset($data["id"])? $data["id"]: '' ?></span>
           </div>
         </div>
 
@@ -53,11 +74,11 @@
               <div class="col-md-3">
                 <div>
                   <ul class="list-unstyled spaced">
-                      <li><mark>Date du jour</mark></li>
-                      <li><mark>Nom du demandeur</mark></li>
-                      <li><mark>Prénom du demandeur</mark></li>
-                      <li><mark>Adresse e-mail</mark></li>
-                      <li><mark>Téléphone</mark></li>
+                      <li><input disabled type="" name="" value="<?php echo date('Y/m/d') ?>"></li>
+                      <li><input disabled class="input--style-6" type="" value="<?= isset($data["noms"])? $data["noms"] : ''  ?>" name="noms" placeholder=""></li>
+                      <li><input disabled class="input--style-6" type="" value="<?= isset($data["nom_famille"])? $data["nom_famille"]: '' ?>" name="nom_famille" placeholder=""></li>
+                      <li><input disabled class="input--style-6" type="mail" value="<?= isset($data["email"])? $data["email"]: '' ?>" name="email" placeholder=""></li>
+                      <li><input disabled class="input--style-6" type="test" value="<?= isset($data["numero"])? $data["numero"]: '' ?>" name="numero" placeholder=""></li>
                     </ul>
                 </div>
               </div><!-- /.col -->
