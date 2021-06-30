@@ -1,25 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['user']))
-{
-include('connexion/connexion.php');
-
-10 mins in seconds
-$inactive = 10;
-if( !isset($_SESSION['timeout']) )
-$_SESSION['timeout'] = time() + $inactive;
-
-$session_life = time() - $_SESSION['timeout'];
-
-if($session_life > $inactive)
-{  session_destroy(); header("location:login.php");     }
-
-$_SESSION['timeout']=time();
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,11 +60,3 @@ $_SESSION['timeout']=time();
 
 </body>
 </html>
-
-<?php
-}
-else{
-    header("location:login.php");
-}
-
-?>

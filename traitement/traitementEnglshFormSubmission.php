@@ -107,7 +107,7 @@
 	}else {
 		$runny_nose = "false";
 	}
-	if (!empty(["cough"])) {
+	if (!empty($_POST["cough"])) {
 		$cough = "true";
 	} else {
 		$cough = "false";
@@ -197,5 +197,20 @@
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-	header('location:../e-ticket-application.php');
+	// Function definition
+
+    function function_alert($message) {
+      // Display the alert box
+      // $message = "Your application has been submitted" ;
+      echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+    // Function call
+    function_alert("Your application has been submitted");
+
+    echo "
+    <script type='text/javascript'>
+    	swal('Your application has been successfully registered', '', 'success');
+    </script>";
+
+	header('location:../popup.php');
 ?>

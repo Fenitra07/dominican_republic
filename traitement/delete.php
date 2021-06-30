@@ -42,13 +42,15 @@
 
 		$result = $conn->query($sqlDelete);
 
-    // Function defnition
+
+    // Function definition
     function function_alert($message) {
       // Display the alert box
+      $message = "The information has been successfully removed" ;
       echo "<script type='text/javascript'>alert('$message');</script>";
     }
     // Function call
-    function_alert("The information has been successfully removed");
+    function_alert($message);
 		header("location: ../dashboard.php");
 	}
 ?>

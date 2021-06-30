@@ -44,7 +44,7 @@
             <p>PORTAL TO APPLY FOR E-TICKETS TO ENTER OR LEAVE THE DOMINICAN REPUBLIC</p>
             <center>
               <a href="e-ticket-application.php">
-                <button type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round"><span>ENTER THE FORM</span>
+                <button type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round"><span>FILL THE FORM</span>
                   <div class="icon icon-round d-flex align-items-center justify-content-center">
                     <i class="fa fa-paper-plane"></i>
                   </div>
@@ -65,7 +65,7 @@
           <p class="texte_blanc interligne">The E-Ticket is a mandatory document that provides the necessary information to each passenger wishing to enter and leave the Dominican Republic. This information is required by the General Office of Immigration and Customs and the Ministry of Public Health of the Dominican Republic.</p>
           <center>
               <a href="e-ticket-application.php">
-                <button type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round" ><span>ENTER THE FORM</span>
+                <button type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round" ><span>FILL THE FORM</span>
                   <div class="icon icon-round d-flex align-items-center justify-content-center">
                     <i class="fa fa-paper-plane"></i>
                   </div>
@@ -92,7 +92,7 @@
               </div>
               <div class="col-md-4">
                 <div class="icons"><img class="form_icon" src="assets/img/paiement.png"></div>
-                <p>Finalise and pay your application with a secure payement system</p>
+                <p>Finalise and pay your application with a secure payment system</p>
               </div>
               <div class="col-md-4">
                 <div class="icons"><img class="form_icon" src="assets/img/mail.png"></div>
@@ -101,7 +101,7 @@
             </div>
           <center>
             <a href="e-ticket-application.php">
-              <button id="enter_the_form" type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round"><span>ENTER THE FORM</span>
+              <button id="enter_the_form" type="button" class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round"><span>FILL THE FORM</span>
                 <div class="icon icon-round d-flex align-items-center justify-content-center">
                   <i class="fa fa-paper-plane"></i>
                 </div>

@@ -238,7 +238,7 @@
                             <div class="name"><span class="name_option">Hotel name (*)</span></div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="" name="hotel_name" onmouseover="checkElementFilling(this)">
+                                    <input class="input--style-6" type="" name="hotel_name" onmouseout="checkElementFilling(this)">
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@
                               <div class="name"><span class="name_option">MUNICIPALITY (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="municipality" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="municipality" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -296,7 +296,7 @@
                               <div class="name"><span class="name_option">SECTION</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="section" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="section" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -357,7 +357,7 @@
                                 <div class="name"><span class="name_option">Transportation company (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="transportation_company" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="transportation_company" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -383,7 +383,7 @@
                                 <div class="name"><span class="name_option">Days of staying (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="days_staying" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="days_staying" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +397,7 @@
                                 <div class="name"><span class="name_option">Origin Port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="origin_port" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="origin_port" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -405,7 +405,7 @@
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="flight_number_yes" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="flight_number_yes" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" name="flight_date_yes" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="date" name="flight_date_yes" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -421,7 +421,7 @@
                                 <div class="name"><span class="name_option">Name of the boarding port (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="boarding_port_yes" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="boarding_port_yes" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -429,7 +429,7 @@
                                 <div class="name"><span class="name_option">Flight number (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="flight_number_yes_2" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="flight_number_yes_2" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -437,7 +437,7 @@
                                 <div class="name"><span class="name_option">Flight date (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="date" name="flight_date_yes_2" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="date" name="flight_date_yes_2" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +465,7 @@
                                 <div class="name"><span class="name_option">Transportation company (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="transportation_company_yes" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="transportation_company_yes" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -491,7 +491,7 @@
                                 <div class="name"><span class="name_option">Days of staying (*)</span></div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="" name="days_staying_yes" onmouseover="checkElementFilling(this)">
+                                        <input class="input--style-6" type="" name="days_staying_yes" onmouseout="checkElementFilling(this)">
                                     </div>
                                 </div>
                             </div>
@@ -528,7 +528,7 @@
                               <div class="name"><span class="name_option">Flight number (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="flight_number_departure" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="flight_number_departure" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -536,7 +536,7 @@
                               <div class="name"><span class="name_option">Flight date (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="date" name="flight_date_departure" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="date" name="flight_date_departure" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -544,7 +544,7 @@
                               <div class="name"><span class="name_option">Disembarkation port  (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="disemarkation_port_departure" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="disemarkation_port_departure" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -552,7 +552,7 @@
                               <div class="name"><span class="name_option">Transportation company (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="transportation_company_departure" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="transportation_company_departure" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -578,7 +578,7 @@
                               <div class="name"><span class="name_option">Days of staying (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="days_staying_departure" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="days_staying_departure" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -614,7 +614,7 @@
                               <div class="name"><span class="name_option">AMMOUNT (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="ammount" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="ammount" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -622,7 +622,7 @@
                               <div class="name"><span class="name_option">CURRENCY (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="currency" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="currency" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -630,7 +630,7 @@
                               <div class="name"><span class="name_option">DECLARE ORIGIN OF THE SECURITIES (*)</span></div>
                               <div class="value">
                                   <div class="input-group">
-                                      <input class="input--style-6" type="" name="declare_origin_security" onmouseover="checkElementFilling(this)">
+                                      <input class="input--style-6" type="" name="declare_origin_security" onmouseout="checkElementFilling(this)">
                                   </div>
                               </div>
                           </div>
@@ -671,22 +671,22 @@
                         <div class="form-row">
                             <table>
                               <tr>
-                                <td><input class="" type="checkbox" name="none" value="none"><p>None</p></td>
-                                <td><input class="" type="checkbox" name="sorethoat" value="sorethoat"><p>Sore throat</p></td>
-                                <td><input class="" type="checkbox" name="muscle_paain" value="muscle_paain"><p>Muscle pain</p></td>
+                                <td><input class="" type="checkbox" name="none" id="none" value="none"><p>None</p></td>
+                                <td><input class="" id="sorethoat" type="checkbox" name="sorethoat" value="sorethoat"><p>Sore throat</p></td>
+                                <td><input class="" type="checkbox" name="muscle_paain" value="muscle_paain" id="muscle_paain"><p>Muscle pain</p></td>
                               </tr>
                               <tr>
-                                <td><input class="" type="checkbox" name="headache" value="headache"><p>Headache</p></td>
-                                <td><input class="" type="checkbox" name="runny_nose" value="runny_nose"><p>Runny nose</p></td>
-                                <td><input class="" type="checkbox" name="cough" value="cough"><p>Cough</p></td>
+                                <td><input class="" type="checkbox" name="headache" value="headache" id="headache"><p>Headache</p></td>
+                                <td><input class="" type="checkbox" name="runny_nose" value="runny_nose" id="runny_nose"><p>Runny nose</p></td>
+                                <td><input class="" type="checkbox" name="cough" value="cough" id="cough"><p>Cough</p></td>
                               </tr>
                               <tr>
-                                <td><input class="" type="checkbox" name="shaking_chills" value="shaking_chills"><p>Shaking chills</p></td>
-                                <td><input class="" type="checkbox" name="breathing_difficulty" value="breathing_difficulty"><p>Breathing difficulty</p></td>
-                                <td><input class="" type="checkbox" name="fatigue" value="fatigue"><p>Fatigue</p></td>
+                                <td><input class="" type="checkbox" name="shaking_chills" value="shaking_chills" id="shaking_chills"><p>Shaking chills</p></td>
+                                <td><input class="" type="checkbox" name="breathing_difficulty" id="breathing_difficulty" value="breathing_difficulty"><p>Breathing difficulty</p></td>
+                                <td><input class="" type="checkbox" name="fatigue" value="fatigue" id="fatigue"><p>Fatigue</p></td>
                               </tr>
                               <tr>
-                                <td><input class="" type="checkbox" name="fever" value="fever"><p>Fever</p></td>
+                                <td><input class="" type="checkbox" name="fever" value="fever" id="fever"><p>Fever</p></td>
                               </tr>
                             </table>
                         </div>
@@ -698,7 +698,7 @@
                             <div class="name">Your e-mail address to receive your E-ticket (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="mail" name="email" id="validation20">
+                                    <input class="input--style-6" type="mail" name="email" id="validation20" required>
                                 </div>
                             </div>
                         </div>
@@ -706,33 +706,35 @@
                             <div class="name">Your phone number (*)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="test" name="numero"id="validation21">
+                                    <input class="input--style-6" type="test" name="numero"id="validation21" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">
-                              <input value="false" type="checkbox" name="accept_condition_generale">
+                              <input value="false" type="checkbox" name="accept_condition_generale" id="accept_condition_generale" required>
                               <span class="custom-control-indicator"></span>
                             </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <span>I accept the general conditions of sale and use and I certify on my honour the accuracy of the information provided. It's reminded that any person making a false declaration on behalf of himself or herself or another person may be liable to the penalties provided for in articles 441-1 of the penal code and following. </span>
+                                    <span id="obligationOne">I accept the general conditions of sale and use and I certify on my honour the accuracy of the information provided. It's reminded that any person making a false declaration on behalf of himself or herself or another person may be liable to the penalties provided for in articles 441-1 of the penal code and following. </span>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name"><input value="false" type="checkbox" name="demande_immediat"></div>
+                            <div class="name">
+                              <input value="false" type="checkbox" id="demande_immediat" name="demande_immediat" required>
+                            </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <span>I would like my E-ticket request to start immediately. I expressly waive my right of withdrawal so that the service can begin before the end of the legal withdrawal period.</span>
+                                    <span id="obligationTwo">I would like my E-ticket request to start immediately. I expressly waive my right of withdrawal so that the service can begin before the end of the legal withdrawal period.</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- SUBMIT BOUTTON -->
                         <div class="card-footer">
-                            <button class="btn btn--radius-2 btn--blue-2" type="submit" id="finaliseApplication">FINALISE THE APPLICATION</button>
+                            <button onclick="return confirm('Please confirm the sending of your information!')" class="btn btn-success" type="submit" id="finaliseApplication">FINALISE THE APPLICATION</button>
                         </div>
                         <!-- SUBMIT BOUTTON -->
 
@@ -744,7 +746,7 @@
                   <!-- BOUTTON SUIVANT & PREVIOUS-->
                         <div class="button_previous card_button_previous">
                            <a href="#section1">
-                              <button class="btn btn--radius-2 btn--blue-2" style="display: none" id="previous" onclick="MyFunctionprevious()">PREVIOUS</button>
+                              <button class="btn btn-info" style="display: none" id="previous" onclick="MyFunctionprevious()">PREVIOUS</button>
                             </a>
                         </div>
 
@@ -754,17 +756,15 @@
                         </div>
                         <div class="card_button_next">
                             <a href="#section1">
-                              <button class="btn btn--radius-2 btn--blue-2" id="next" style="" type="submit">NEXT</button>
+                              <button class="btn btn-info" id="next" style="" type="submit">NEXT</button>
                             </a>
                         </div>
-
 
                         <!-- <div class="card_button_next">
                             <a href="#section1">
                               <button class="btn btn--radius-2 btn--blue-2" id="next" style="" onclick="MyFunctionNext()" type="submit">NEXT</button>
                             </a>
                         </div> -->
-
 
                 <!-- </div> SCRIPT JS : End 2nd part of FORM -->
 

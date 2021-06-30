@@ -591,6 +591,7 @@ h1, h2, h3, h4 {
                                     }
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $headache? "checked": ''  ?> name="headache"><p>Headache</p></td>
+
                                 <?php
                                     if ($data["runny_nose"] == "true") {
                                         $runny_nose = true;
@@ -599,6 +600,8 @@ h1, h2, h3, h4 {
                                     }
                                  ?>
                                 <td><input disabled class="" type="checkbox" <?= $runny_nose? "checked": ''  ?> name="runny_nose"><p>Runny nose</p></td>
+
+
                                  <?php
                                     if ($data["cough"] == "true") {
                                         $cough = true;

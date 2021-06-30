@@ -4,8 +4,8 @@ if(isset($_SESSION['user']))
 {
 include('connexion/connexion.php');
 
-10 mins in seconds
-$inactive = 10;
+// 10 mins in seconds
+$inactive = 300;
 if( !isset($_SESSION['timeout']) )
 $_SESSION['timeout'] = time() + $inactive;
 
@@ -184,7 +184,7 @@ iframe
     } );
     </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var IDLE_TIMEOUT = 1 * 60;  // 10 minutes of inactivity
     var _idleSecondsCounter = 0;
     document.onclick = function() {
@@ -207,7 +207,7 @@ iframe
             document.location.href = "login.php";
         }
     }
-</script>
+</script> -->
 
   <!-- MAIN SCRIPTS -->
     <script src="assets/js/table.js"></script>
