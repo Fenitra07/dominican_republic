@@ -3,6 +3,7 @@
 <?php
 
 	include('../connexion/connexion.php');
+    include("../mail/setting_mail.php");
 
 	/*table demande billet*/
 
@@ -197,7 +198,13 @@
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-	// Function definition
+	//confirmation mail ;
+
+    require '../confirmationMailFinalisation.php';
+    require '../confirmationMailDetails.php';
+    require '../confirmationMailFacture.php';
+
+    // Function definition
 
     function function_alert($message) {
       // Display the alert box
