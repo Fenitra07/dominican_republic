@@ -99,8 +99,8 @@ if (!empty($_GET["id"])) {
                 <tbody>
                   <tr>
                     <td>SVC-E-ticket</td>
-                    <td>69,9 USD</td>
-                    <td>69,9 USD</td>
+                    <td>69,9 €</td>
+                    <td>69,9 €</td>
                   </tr>
                 </tbody>
               </table>
@@ -111,7 +111,7 @@ if (!empty($_GET["id"])) {
             <div class="row">
               <div class="col-md-4"></div>
               <div class="col-md-8">
-                <h4>Total amount :<span class="red">69,9 USD</span></h4>
+                <h4>Total amount :<span class="red">69,9 €</span></h4>
                 <p>Pénalités de retard (taux annuel) : 10,05 %</p>
                 <p>Escompte pour paiement anticipé (taux mensuel) : 1,5 %</p>
                 <p>Indemnité forfaitaire pour frais de recouvrement en cas de retard de paiement : 40,00 €</p>
