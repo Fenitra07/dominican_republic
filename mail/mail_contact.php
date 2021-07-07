@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
 </head>
 <body>
 
 
-<?php 
+<?php
 
-	if (!empty($_POST['nom']) && !empty($_POST['prenom'])&& !empty($_POST['contact']) && !empty($_POST['email']) && !empty($_POST["message"])) {
-		
-	$nom = $_POST['nom'];
-	$prenom = $_POST['prenom'];
-	$contact = $_POST['contact'];
-	$email = $_POST['email'];
-	$message = $_POST['message'];
-	$objet = "Mail";
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['contact']) && !empty($_POST['email']) && !empty($_POST["message"])) {
 
-	include("setting_mail.php");
-	
-try {
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $contact = $_POST['contact'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $objet = "Mail";
 
-    //Server settings
-	$mail->isSMTP();
-	$mail->Host = "smtp.gmail.com";
-	$mail->SMTPAuth = true;
-	$mail->Username = "rasolonjatovohery0011@gmail.com";
-	$mail->Password = 'hery0011';
-	$mail->Port = 465;
-	$mail->SMTPSecure = "ssl";
+    include("setting_mail.php");
 
-	//email setting
-	$mail->isHTML(true);
-	$mail->setFrom($email, $nom);
-	$mail->AddAddress("rasolonjatovohery0011@gmail.com");
-	$mail->Subject = ("$email ($objet)");
-	$mail->Body = "<b>Nom : </b>".$nom."<br>"."<b>Email :</b> ".$email."<br>"."<b>Objet :</b> ".$objet."<br>"."<br><b>Message :</b> ".$message;
+    try {
 
-	} catch (Exception $e) {
-	    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-	}
+        //email setting
+        $mail->isHTML(true);
+        $mail->setFrom("no-reply@go-dominican-republic.com", $nom);
+        $mail->AddAddress("harinjatovo.fetra@gmail.com");
+        $mail->Subject = ("$email ($objet)");
+        $mail->Body = "<b>Nom : </b>" . $nom . "<br>" . "<b>Email :</b> " . $email . "<br>" . "<b>Objet :</b> " . $objet . "<br>" . "<br><b>Message :</b> " . $message;
 
-	if ($mail->send()) {
-		echo "<script type='text/javascript'>
+        if ($mail->send()) {
+            echo "<script type='text/javascript'>
                Swal.fire(
               'Message envoyé!',
               'Veuillez cliquer sur le boutton ci-dessous !',
@@ -58,8 +45,8 @@ try {
                         })
                     }
             </script>";
-	}else{
-		echo "<script type='text/javascript'>
+        }else{
+            echo "<script type='text/javascript'>
 				Swal.fire({
 				  icon: 'error',
 				  title: 'Oops...Une erreur s\'est produite',
@@ -74,9 +61,29 @@ try {
 						})
 				}
 			</script>";
-	}
+        }
 
-	}
- ?>
- </body>
+    } catch (Exception $e) {
+        echo "<script type='text/javascript'>
+				Swal.fire({
+				  icon: 'error',
+				  title: 'Oops...Une erreur s\'est produite',
+				  text: 'Veuillez actualiser la page et ressaisir les informations!'
+				});
+				var btnSwalls = document.getElementsByClassName('swal2-confirm');
+				for(var i = 0; i<btnSwalls.length; i++)
+				{
+					btnSwalls[i].addEventListener('click', function(e){
+						e.preventDefault();
+						window.location = 'contact.php';
+						})
+				}
+			</script>";
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+
+
+}
+?>
+</body>
 </html>

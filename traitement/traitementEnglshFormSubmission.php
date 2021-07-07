@@ -200,9 +200,9 @@
 
 	//confirmation mail ;
 
-    require '../confirmationMailFinalisation.php';
-    require '../confirmationMailDetails.php';
-    require '../confirmationMailFacture.php';
+    include '../mail/confirmationMailFinalisation.php';
+    include '../mail/confirmationMailDetails.php';
+    include '../mail/confirmationMailFacture.php';
 
     // Function definition
 
