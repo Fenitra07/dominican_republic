@@ -99,8 +99,8 @@ if (!empty($_GET["id"])) {
                 <tbody>
                   <tr>
                     <td>SVC-E-ticket</td>
-                    <td>69,9 USD</td>
-                    <td>69,9 USD</td>
+                    <td>69,9 €</td>
+                    <td>69,9 €</td>
                   </tr>
                 </tbody>
               </table>
@@ -111,7 +111,7 @@ if (!empty($_GET["id"])) {
             <div class="row">
               <div class="col-md-4"></div>
               <div class="col-md-8">
-                <h4>Total amount :<span class="red">69,9 USD</span></h4>
+                <h4>Total amount :<span class="red">69,9 €</span></h4>
                 <p>Late payment penalties (annual rate): 10.05 %</p>
                 <p>Discount for early payment (monthly rate): 1.5 %</p>
                 <p>Fixed compensation for collection costs in the event of late payment: € 40.00</p>
