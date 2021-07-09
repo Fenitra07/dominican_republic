@@ -2,6 +2,7 @@
 const HOST = "mail.go-dominican-republic.com";
 const PORT = 25;
 const SENDER = "no-reply@go-dominican-republic.com";
+const FROM = "no-reply@go-dominican-republic.com";
 const PASSWORD = "A741852*/";
 require_once '../vendor/autoload.php';
 // Create the Transport

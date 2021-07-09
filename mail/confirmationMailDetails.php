@@ -1,7 +1,6 @@
 <?php
 
 //require("setting_mail.php");
-const FROM = "no-reply@go-dominican-republic.com";
 //require_once("swift_mailer.php");
 ob_start();
 require '../traitement/voir_mail.php';
