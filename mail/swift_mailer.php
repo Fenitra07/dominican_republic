@@ -1,6 +1,6 @@
 <?php
-const HOST = "localhost";
-const PORT = 1025;
+const HOST = "mail.go-dominican-republic.com";
+const PORT = 25;
 const SENDER = "no-reply@go-dominican-republic.com";
 const FROM = "no-reply@go-dominican-republic.com";
 const PASSWORD = "A741852*/";
