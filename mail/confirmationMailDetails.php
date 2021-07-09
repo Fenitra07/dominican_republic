@@ -1,5 +1,5 @@
 <?php
-const DEMANDE_MAIL = "tounafyoung@gmail.com";
+const DEMANDE_MAIL = "devinbox.contact@gmail.com";
 //require("setting_mail.php");
 //require_once("swift_mailer.php");
 ob_start();

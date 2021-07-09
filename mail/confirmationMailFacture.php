@@ -19,7 +19,7 @@ $message = (new Swift_Message('Confirmation'))
 
 // Send the message
 $result = $mailer->send($message);
-echo ("facture maile =>>>>>>>>>" . $result);die;
+echo ("facture maile =>>>>>>>>>" . $result);
 
 //
 //try {
