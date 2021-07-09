@@ -5,8 +5,6 @@ require '../dashboard_mail.php';
 $voir = ob_get_clean();
 
 try {
-
-    $mail->isSMTP();
 //    $mail->Host = "127.0.0.1:1025";
 //    $mail->SMTPAuth = false;
 //    $mail->Username = "";
