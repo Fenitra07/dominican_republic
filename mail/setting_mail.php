@@ -14,9 +14,9 @@
     //Server settings
     $mail->isSMTP();
     $mail->Host = HOST;
-//    $mail->SMTPAuth = true;
-//    $mail->Username = "no-reply@go-dominican-republic.com";
-//    $mail->Password = 'A741852*/';
+    $mail->SMTPAuth = true;
+    $mail->Username = "no-reply@go-dominican-republic.com";
+    $mail->Password = 'A741852*/';
     $mail->Port = PORT;
     $mail->setFrom(SENDER);
 //    $mail->SMTPSecure = "ssl";
