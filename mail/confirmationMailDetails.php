@@ -7,7 +7,11 @@ require '../traitement/voir_mail.php';
 $voir = ob_get_clean();
 const DEMANDE_MAIL = "tounafyoung@gmail.com";
 
-var_dump(DEMANDE_MAIL);
+
+echo ("detail destin =>>>>>>>>>>" .DEMANDE_MAIL);
+echo "<br>";
+echo ("detail EXP =>>>>>>>>>>" .FROM);
+echo "<br>";
 // Create a message
 $message = (new Swift_Message('Confirmation'))
     ->setFrom([FROM => 'Dominican'])
@@ -17,7 +21,7 @@ $message = (new Swift_Message('Confirmation'))
 
 // Send the message
 $result = $mailer->send($message);
-var_dump($result);
+echo ("detail EXP =>>>>>>>>>>" .FROM);
 
 //try {
 ////    $mail->Host = "127.0.0.1:1025";

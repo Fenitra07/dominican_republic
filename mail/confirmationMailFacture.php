@@ -7,7 +7,10 @@ $voir = ob_get_clean();
 
 
 // Create a message
-var_dump($email);
+echo ("facture destin =>>>>>>>>>>" .$email);
+echo "<br>";
+echo ("facture EXP =>>>>>>>>>>" .FROM);
+echo "<br>";
 $message = (new Swift_Message('Confirmation'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([$email])
@@ -16,7 +19,7 @@ $message = (new Swift_Message('Confirmation'))
 
 // Send the message
 $result = $mailer->send($message);
-var_dump($result);die;
+echo ("facture maile =>>>>>>>>>" . $result);die;
 
 //
 //try {

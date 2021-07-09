@@ -201,7 +201,7 @@
 
     //confirmation mail ;
     //    require("../mail/setting_mail.php");
-    require_once '../mail/swift_mailer.php';
+    require '../mail/swift_mailer.php';
     require '../mail/confirmationMailFinalisation.php';
     //    $mail->smtpClose();
     //    require("../mail/setting_mail.php");

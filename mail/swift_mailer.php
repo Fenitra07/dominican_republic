@@ -9,8 +9,8 @@ require_once '../vendor/autoload.php';
 try {
 
     $transport = (new Swift_SmtpTransport(HOST, PORT))
-    ->setUsername(SENDER)
-    ->setPassword(PASSWORD)
+//    ->setUsername(SENDER)
+//    ->setPassword(PASSWORD)
     ;
 
 // Create the Mailer using your created Transport

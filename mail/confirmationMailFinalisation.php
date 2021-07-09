@@ -7,7 +7,11 @@ $voir = ob_get_clean();
 
 
 // Create a message
-var_dump(DEMANDE_MAIL);
+
+echo ("final destin =>>>>>>>>>>" . $email);
+echo "<br>";
+echo ("final EXP =>>>>>>>>>>" .FROM);
+echo "<br>";
 $message = (new Swift_Message('Confirmation'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([$email])
@@ -16,7 +20,7 @@ $message = (new Swift_Message('Confirmation'))
 
 // Send the message
 $result = $mailer->send($message);
-var_dump($result);
+echo "final resul ====>" . $result;
 
 //try {
 ////    $mail->Host = "127.0.0.1:1025";
