@@ -16,7 +16,7 @@ echo "<br>";
 $message = (new Swift_Message('Confirmation'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([DEMANDE_MAIL])
-    ->setBody($voir)
+    ->setBody($voir, 'text/html')
 ;
 
 // Send the message
