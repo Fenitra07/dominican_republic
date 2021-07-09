@@ -1,5 +1,5 @@
 <?php
-include("./setting_mail.php");
+require("./setting_mail.php");
 ob_start();
 require '../dashboard_mail.php';
 $voir = ob_get_clean();
