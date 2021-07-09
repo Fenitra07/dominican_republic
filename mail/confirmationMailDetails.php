@@ -1,6 +1,6 @@
 <?php
 
-require("./setting_mail.php");
+require("setting_mail.php");
 ob_start();
 require '../traitement/voir_mail.php';
 $voir = ob_get_clean();
