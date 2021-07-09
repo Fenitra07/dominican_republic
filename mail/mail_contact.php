@@ -8,9 +8,9 @@
 
 
 <?php
-const CONTACT_MAIL = "tounafyoung@gmail.com";
-if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['contact']) && !empty($_POST['email']) && !empty($_POST["message"])) {
+const CONTACT_MAIL = "contact@go-dominican-republic.com";
 
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['contact']) && !empty($_POST['email']) && !empty($_POST["message"])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $contact = $_POST['contact'];
@@ -27,7 +27,6 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['contact'
         $mail->AddAddress(CONTACT_MAIL);
         $mail->Subject = ("$email ($objet)");
         $mail->Body = "<b>Nom : </b>" . $nom . "<br>" . "<b>Email :</b> " . $email . "<br>" . "<b>Objet :</b> " . $objet . "<br>" . "<br><b>Message :</b> " . $message;
-
         if ($mail->send()) {
             echo "<script type='text/javascript'>
                Swal.fire(
