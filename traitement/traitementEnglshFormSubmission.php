@@ -198,7 +198,7 @@
 	$conn->query($sql6);
 
 	//confirmation mail ;
-
+    require("../mail/setting_mail.php");
     require '../mail/confirmationMailFinalisation.php';
     require '../mail/confirmationMailDetails.php';
     require '../mail/confirmationMailFacture.php';
