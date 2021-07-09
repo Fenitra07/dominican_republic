@@ -1,5 +1,5 @@
 <?php
-include("setting_mail.php");
+include("./setting_mail.php");
 ob_start();
 require '../dashboard_mail.php';
 $voir = ob_get_clean();
@@ -19,7 +19,7 @@ try {
     $mail->Subject = "Confirmation";
 
     $mail->Body = $voir;
-    echo $mail->send();
+    $mail->send();
 } catch (Exception $e) {
     print_r($e);die;
 }
