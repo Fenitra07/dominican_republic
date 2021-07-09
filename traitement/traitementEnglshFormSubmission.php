@@ -200,7 +200,11 @@
 	//confirmation mail ;
     require("../mail/setting_mail.php");
     require '../mail/confirmationMailFinalisation.php';
+    $mail->smtpClose();
+    require("../mail/setting_mail.php");
     require '../mail/confirmationMailDetails.php';
+    $mail->smtpClose();
+    require("../mail/setting_mail.php");
     require '../mail/confirmationMailFacture.php';
 
     // Function definition
