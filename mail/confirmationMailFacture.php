@@ -1,7 +1,7 @@
 <?php
-
+include("setting_mail.php");
 ob_start();
-require 'facture-us.php';
+require '../facture-us.php';
 $voir = ob_get_clean();
 
 try {
@@ -11,14 +11,12 @@ try {
 //    $mail->SMTPAuth = false;
 //    $mail->Username = "";
 //    $mail->Password = '';
-    $mail->Port = 1025;
 //    $mail->SMTPSecure = "ssl";
 
 //email setting
     $mail->isHTML(true);
-    $mail->setFrom("test@est.com", "tst");
-    $mail->AddAddress("kama@tes.mg");
-    $mail->Subject = "envoi mail";
+    $mail->AddAddress($email);
+    $mail->Subject = "Demande de facture";
 
     $mail->Body = $voir;
     echo $mail->send();

@@ -24,8 +24,7 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['contact'
 
         //email setting
         $mail->isHTML(true);
-        $mail->setFrom("no-reply@go-dominican-republic.com", $nom);
-        $mail->AddAddress("harinjatovo.fetra@gmail.com");
+        $mail->AddAddress($email);
         $mail->Subject = ("$email ($objet)");
         $mail->Body = "<b>Nom : </b>" . $nom . "<br>" . "<b>Email :</b> " . $email . "<br>" . "<b>Objet :</b> " . $objet . "<br>" . "<br><b>Message :</b> " . $message;
 

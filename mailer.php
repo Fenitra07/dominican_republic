@@ -4,7 +4,7 @@ require_once './vendor/autoload.php';
 // Create the Transport
 try {
 
-    $transport = (new Swift_SmtpTransport('mail.go-dominican-republic.com', 2079))
+    $transport = (new Swift_SmtpTransport('mail.go-dominican-republic.com', 25))
 //    ->setUsername('no-reply@go-dominican-republic.com')
 //    ->setPassword('A741852*/')
     ;

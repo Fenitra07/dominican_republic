@@ -3,7 +3,6 @@
 <?php
 
 	include('../connexion/connexion.php');
-    include("../mail/setting_mail.php");
 
 	/*table demande billet*/
 

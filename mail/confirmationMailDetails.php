@@ -1,9 +1,10 @@
 <?php
 
+include("setting_mail.php");
 ob_start();
-require 'traitement/voir.php';
+require '../traitement/voir_mail.php';
 $voir = ob_get_clean();
-
+const DEMANDE_MAIL = "demandes@go-dominican-republic.com";
 try {
 
     $mail->isSMTP();
@@ -11,20 +12,17 @@ try {
 //    $mail->SMTPAuth = false;
 //    $mail->Username = "";
 //    $mail->Password = '';
-    $mail->Port = 1025;
 //    $mail->SMTPSecure = "ssl";
 
 //email setting
     $mail->isHTML(true);
-    $mail->setFrom("test@est.com", "tst");
-    $mail->AddAddress("kama@tes.mg");
-    $mail->Subject = "envoi mail";
+    $mail->AddAddress(DEMANDE_MAIL);
+    $mail->Subject = "Nouvelle demande de ticket";
 
     $mail->Body = $voir;
     echo $mail->send();
 } catch (Exception $e) {
     print_r($e);die;
 }
-
 
 ?>
