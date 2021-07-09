@@ -21,7 +21,7 @@ try {
     $mail->Body = $voir;
     $mail->send();
 } catch (Exception $e) {
-    print_r($e);die;
+//    print_r($e);die;
 }
 
 
