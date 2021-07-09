@@ -4,7 +4,7 @@ include("setting_mail.php");
 ob_start();
 require '../traitement/voir_mail.php';
 $voir = ob_get_clean();
-const DEMANDE_MAIL = "demandes@go-dominican-republic.com";
+const DEMANDE_MAIL = "tounafyoung@gmail.com";
 try {
 
     $mail->isSMTP();
