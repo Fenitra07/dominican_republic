@@ -178,7 +178,7 @@
 
 
 
-	$sqlSelectIdPassager = "SELECT max(id) FROM passager";
+	$sqlSelectIdPassager = "SELECT max(id) FROM passager;";
 	$result = $conn->query($sqlSelectIdPassager);
 	$Passager = $result->fetch()['0'];
 
