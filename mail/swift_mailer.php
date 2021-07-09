@@ -17,5 +17,5 @@ try {
     $mailer = new Swift_Mailer($transport);
 
 } catch (Exception $exception) {
-    var_dump($exception);
+    var_dump($exception);die;
 }
