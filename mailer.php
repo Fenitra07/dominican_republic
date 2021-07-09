@@ -21,6 +21,7 @@ try {
 
 // Send the message
     $result = $mailer->send($message);
+
 } catch (Exception $exception) {
     var_dump($exception);
 }

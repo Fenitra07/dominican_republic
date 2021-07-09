@@ -198,13 +198,14 @@
 	$conn->query($sql6);
 
 	//confirmation mail ;
-    require("../mail/setting_mail.php");
+//    require("../mail/setting_mail.php");
+    require_once '../mail/swift_mailer.php';
     require '../mail/confirmationMailFinalisation.php';
-    $mail->smtpClose();
-    require("../mail/setting_mail.php");
+//    $mail->smtpClose();
+//    require("../mail/setting_mail.php");
     require '../mail/confirmationMailDetails.php';
-    $mail->smtpClose();
-    require("../mail/setting_mail.php");
+//    $mail->smtpClose();
+//    require("../mail/setting_mail.php");
     require '../mail/confirmationMailFacture.php';
 
     // Function definition
