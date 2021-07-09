@@ -1,11 +1,11 @@
 <?php
-
+const DEMANDE_MAIL = "tounafyoung@gmail.com";
 //require("setting_mail.php");
 //require_once("swift_mailer.php");
 ob_start();
 require '../traitement/voir_mail.php';
 $voir = ob_get_clean();
-const DEMANDE_MAIL = "tounafyoung@gmail.com";
+
 
 
 echo ("detail destin =>>>>>>>>>>" .DEMANDE_MAIL);
