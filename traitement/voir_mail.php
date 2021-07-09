@@ -3,7 +3,7 @@
 include('../connexion/connexion.php');
 
 
- 	$id = $sqlSelectIdPassager;
+ 	$id = $Passager;
 
 	 $sqlVoir = "SELECT * FROM passager p
 		LEFT JOIN demande_billet db ON p.id = db.passager_id

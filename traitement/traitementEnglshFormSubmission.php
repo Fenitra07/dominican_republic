@@ -3,6 +3,7 @@
 <?php
 
 	include('../connexion/connexion.php');
+//    include("../mail/setting_mail.php");
 
 	/*table demande billet*/
 
@@ -178,7 +179,7 @@
 
 
 
-	$sqlSelectIdPassager = "SELECT max(id) FROM passager;";
+	$sqlSelectIdPassager = "SELECT max(id) FROM passager";
 	$result = $conn->query($sqlSelectIdPassager);
 	$Passager = $result->fetch()['0'];
 
@@ -197,15 +198,16 @@
 	$sql6 = " INSERT INTO symptome_has_passager (symptome_id, passager_id) VALUES ('$symptome', '$Passager')";
 	$conn->query($sql6);
 
-	//confirmation mail ;
-//    require("../mail/setting_mail.php");
+
+    //confirmation mail ;
+    //    require("../mail/setting_mail.php");
     require_once '../mail/swift_mailer.php';
     require '../mail/confirmationMailFinalisation.php';
-//    $mail->smtpClose();
-//    require("../mail/setting_mail.php");
+    //    $mail->smtpClose();
+    //    require("../mail/setting_mail.php");
     require '../mail/confirmationMailDetails.php';
-//    $mail->smtpClose();
-//    require("../mail/setting_mail.php");
+    //    $mail->smtpClose();
+    //    require("../mail/setting_mail.php");
     require '../mail/confirmationMailFacture.php';
 
     // Function definition
