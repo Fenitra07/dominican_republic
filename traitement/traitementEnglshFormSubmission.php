@@ -6,7 +6,6 @@
 //    include("../mail/setting_mail.php");
 
 	/*table demande billet*/
-
 	if (!empty($_POST["accept_condition_generale"])) {
 		$accept_condition_generale = "true";
 	}else{
@@ -200,6 +199,7 @@
 
 
     //confirmation mail ;
+    $lang = $_POST['finaliser']??'eng';
     require '../mail/swift_mailer.php';
     require '../mail/confirmationMailFinalisation.php';
     require '../mail/confirmationMailFacture.php';

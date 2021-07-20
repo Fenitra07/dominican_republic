@@ -738,6 +738,7 @@
                             <input onclick="return confirm('Please confirm!')" class="btn btn-success" type="submit" id="finaliseApplication" value="FINALISER LA DEMANDE">
                         </div> -->
                         <div class="card-footer">
+                            <input type="hidden" name="finaliser" value="fr">
                             <button onclick="return confirm('Veuillez confirmer!')" class="btn btn-success" type="submit" id="finaliseApplication">FINALISE THE APPLICATION</button>
                         </div>
                         <!-- SUBMIT BOUTTON -->

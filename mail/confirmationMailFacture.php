@@ -2,7 +2,11 @@
 //require("setting_mail.php");
 //require_once("swift_mailer.php");
 ob_start();
-require '../facture-us.php';
+if ($lang == "fr") {
+  require '../facture-fr.php';	
+} else {
+  require '../facture-us.php';
+}
 $voir = ob_get_clean();
 
 
@@ -14,6 +18,7 @@ echo "<br>";
 $message = (new Swift_Message('Bill from : go-dominican-republic.com'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([$email])
+    ->setContentType('text/html')
     ->setBody($voir, "text/html")
 ;
 
