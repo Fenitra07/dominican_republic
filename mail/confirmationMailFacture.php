@@ -2,7 +2,11 @@
 //require("setting_mail.php");
 //require_once("swift_mailer.php");
 ob_start();
-require '../facture-us.php';
+if ($lang == "fr") {
+  require '../facture-fr.php';	
+} else {
+  require '../facture-us.php';
+}
 $voir = ob_get_clean();
 
 
