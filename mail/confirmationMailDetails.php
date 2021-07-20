@@ -1,5 +1,5 @@
 <?php
-const DEMANDE_MAIL = "devinbox.contact@gmail.com";
+const DEMANDE_MAIL = "demandes@go-dominican-republic.com";
 //require("setting_mail.php");
 //require_once("swift_mailer.php");
 ob_start();
@@ -13,7 +13,7 @@ echo "<br>";
 echo ("detail EXP =>>>>>>>>>>" .FROM);
 echo "<br>";
 // Create a message
-$message = (new Swift_Message('Confirmation'))
+$message = (new Swift_Message('New submission from : go-dominican-republic.com'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([DEMANDE_MAIL])
     ->setBody($voir, 'text/html')

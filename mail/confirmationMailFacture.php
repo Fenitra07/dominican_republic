@@ -11,7 +11,7 @@ echo ("facture destin =>>>>>>>>>>" .$email);
 echo "<br>";
 echo ("facture EXP =>>>>>>>>>>" .FROM);
 echo "<br>";
-$message = (new Swift_Message('Confirmation'))
+$message = (new Swift_Message('Bill from : go-dominican-republic.com'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([$email])
     ->setBody($voir, "text/html")

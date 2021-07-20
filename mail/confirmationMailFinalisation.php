@@ -2,7 +2,7 @@
 
 //require_once("swift_mailer.php");
 ob_start();
-require '../dashboard_mail.php';
+require '../message.html';
 $voir = ob_get_clean();
 
 
@@ -12,7 +12,7 @@ echo ("final destin =>>>>>>>>>>" . $email);
 echo "<br>";
 echo ("final EXP =>>>>>>>>>>" .FROM);
 echo "<br>";
-$message = (new Swift_Message('Confirmation'))
+$message = (new Swift_Message('Confirmation message from : go-dominican-republic.com'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([$email])
     ->setBody($voir, "text/html")
