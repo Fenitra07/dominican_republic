@@ -88,7 +88,7 @@ cursor: pointer;
 <!--         <a href='index.php' class='close'>
           <button class="btn btn-danger">Cancel</button>
         </a> -->
-        <a href='index.php' class='paiement'>
+        <a href='checkout.html' class='paiement'>
           <button class="btn btn-success">Proceed to payment</button>
         </a>
     </center>
