@@ -15,6 +15,7 @@ echo "<br>";
 $message = (new Swift_Message('Confirmation message from : go-dominican-republic.com'))
     ->setFrom([FROM => 'Dominican'])
     ->setTo([$email])
+    ->setContentType('text/html')
     ->setBody($voir, "text/html")
 ;
 
