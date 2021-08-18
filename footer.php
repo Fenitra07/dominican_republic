@@ -62,12 +62,12 @@ footer {
         <div class="col-md-5">
           <p class="texte_blanc footer_font_size">GO-DOMINICAN-REPUBLIC.COM is a private website non affiliated with the government</p>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
             <ul>
-                <li class="li_footer"><a class="" href="termAndCondition.html">Terms & Conditions</a></li>
+                <!-- <li class="li_footer"><a class="" href="">Legal Disclaimer</a></li> -->
+                <li class="li_footer"><a class="" href="termAndCondition.html">&#124; Terms & Conditions</a></li>
                 <li class="li_footer li_border"><a class="" href="privacyPolicy.html">&#124; Privacy Policy &#124;</a></li>
-                <li class="li_footer"><a class="" href="">Legal Disclaimer</a></li>
             </ul>
         </div>
       </div>

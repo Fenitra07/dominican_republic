@@ -15,7 +15,9 @@
       <header class="header">
          <div class="container">
             <div class="wrapper">
-               <p><img src="assets/img/logo.png"></p>
+               <a href="index.php" style="cursor: pointer;">
+                  <p><img src="assets/img/logo.png"></p>
+               </a>
                <button type="button" class="opened-menu">
                   <span></span>
                   <span></span>
